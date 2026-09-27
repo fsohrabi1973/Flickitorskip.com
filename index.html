@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Now Showing - Movie Reviews</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <span class="brand-mark">&#127916;</span>
+      <div>
+        <h1>Now Showing</h1>
+        <p class="tagline">What's in theaters, and whether it's worth the ticket</p>
+      </div>
+    </div>
+    <nav class="tabs" id="tabs">
+      <button class="tab active" data-tab="reviews">Reviews</button>
+      <a class="tab tab-link" href="https://gofobo.com/main/local_screenings"
+         target="_blank" rel="noopener">GOFOBO Free Screenings &#8599;</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="panel-reviews" class="panel active">
+      <div class="toolbar">
+        <p class="updated" id="updated"></p>
+        <div class="filters" id="filters"></div>
+      </div>
+      <div class="grid" id="grid"></div>
+    </section>
+  </main>
+
+  <div class="modal" id="modal" hidden>
+    <div class="modal-backdrop" data-close></div>
+    <article class="modal-body" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <button class="modal-close" data-close aria-label="Close">&times;</button>
+      <div id="modal-content"></div>
+    </article>
+  </div>
+
+
+  <script src="reviews.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
