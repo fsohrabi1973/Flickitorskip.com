@@ -5,6 +5,8 @@
   var modalContent = document.getElementById('modal-content');
   var activeGenre = 'All';
 
+  var isArchivePage = window.location.pathname.includes('archive.html');
+
   // New releases first, then by box office rank.
   function sortKey(m) {
     var n = parseInt(String(m.status).replace(/[^0-9]/g, ''), 10);
@@ -12,8 +14,10 @@
   }
   MOVIES.sort(function (a, b) { return sortKey(a) - sortKey(b); });
 
-  document.getElementById('updated').textContent =
-    'Updated ' + SITE.updated + ' · Box office through the ' + SITE.boxOfficeWeekend + ' weekend';
+  if (document.getElementById('updated')) {
+    document.getElementById('updated').textContent =
+      'Updated ' + SITE.updated + ' · Box office through the ' + SITE.boxOfficeWeekend + ' weekend';
+  }
 
   function esc(s) {
     return String(s).replace(/[&<>"']/g, function (c) {
@@ -44,10 +48,15 @@
   }
 
   function renderFilters() {
+    var data = MOVIES.filter(function (m) {
+      return isArchivePage ? m.archived : !m.archived;
+    });
+
     var genres = ['All'];
-    MOVIES.forEach(function (m) {
+    data.forEach(function (m) {
       m.genres.forEach(function (g) { if (genres.indexOf(g) === -1) genres.push(g); });
     });
+
     filtersEl.innerHTML = genres.map(function (g) {
       return '<button class="filter' + (g === activeGenre ? ' active' : '') + '" data-genre="' + esc(g) + '">' + esc(g) + '</button>';
     }).join('');
@@ -55,7 +64,7 @@
 
   function renderGrid() {
     var list = MOVIES.filter(function (m) {
-      return activeGenre === 'All' || m.genres.indexOf(activeGenre) !== -1;
+      return (isArchivePage ? m.archived : !m.archived) && (activeGenre === 'All' || m.genres.indexOf(activeGenre) !== -1);
     });
     grid.innerHTML = list.map(function (m) {
       return '<article class="card" data-id="' + esc(m.id) + '">' +
@@ -76,7 +85,7 @@
   }
 
   function openReview(id) {
-    var m = MOVIES.filter(function (x) { return x.id === id; })[0];
+    var m = MOVIES.find(function (x) { return x.id === id; });
     if (!m) return;
     modalContent.innerHTML =
       '<div class="review-banner" style="background:' + m.color + '">' +
