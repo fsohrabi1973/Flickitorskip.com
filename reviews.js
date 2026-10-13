@@ -3,15 +3,96 @@
 // Posters come from the TMDB image CDN (image.tmdb.org). TMDB's terms ask for attribution somewhere on the site.
 
 var SITE = {
-  updated: 'October 3, 2026',
-  boxOfficeWeekend: 'Oct. 2-4'
+  updated: 'October 13, 2026',
+  boxOfficeWeekend: 'Oct. 9-11'
 };
 
 var MOVIES = [
   {
+    id: 'other-mommy',
+    title: 'Other Mommy',
+    status: '#1 at the box office',
+    poster: 'https://image.tmdb.org/t/p/w500/fGRNCssTRrhYZxNzykGGCoMsAVq.jpg',
+    tmdbId: 1400837,
+    director: 'Rob Savage',
+    cast: ['Jessica Chastain', 'Jay Duplass', 'Arabella Olivia Clark', 'Dichen Lachman', 'Arian Moayed', 'Karen Allen'],
+    studio: 'Universal Pictures',
+    mpaa: 'R',
+    runtime: '1h 33m',
+    genres: ['Horror', 'Supernatural'],
+    color: 'linear-gradient(135deg, #1a0505 0%, #7a0a0a 55%, #0d0d0d 100%)',
+    rating: 1.5,
+    headline: "Jessica Chastain gives it everything. The movie gives her a lot less back.",
+    review: [
+      "A horror movie about a thing that looks exactly like your mom should be the easiest scare in the world. Every kid has had that moment where a parent seems a little off and you can't say why. Other Mommy has that idea, a great poster and Jessica Chastain. It's frustrating how little it does with all three.",
+      "The setup is simple. A little girl starts seeing something in the house that looks and sounds just like her mother, and it keeps asking to be let in. Not into the house. Into her. Her real mom has to figure out what this thing is and how to keep her daughter away from it, which gets harder when the kid can't always tell the two of them apart.",
+      "Chastain is the reason to care. She commits completely, and when the movie lets her be warm one second and wrong the next, it's genuinely creepy. Rob Savage knows how to stage a jump scare, and a few of them work. The red-soaked look of the thing is striking too.",
+      "The trouble is everything around those moments. The rules of the entity keep shifting, the dialogue gets goofy when it should be menacing, and by the back half it's leaning on loud noises instead of dread. Audiences who showed up opening weekend did not walk away happy, and I can see why. It plays sillier than it thinks it is.",
+      "It made a pile of money because the hook is that good. If you're a horror completist, you'll find a couple of scenes to like. Everybody else can wait for streaming, or just call their own mom."
+    ],
+    bottomLine: "A killer premise and a fearless lead, buried under a movie that can't keep a straight face.",
+    scores: { rt: '17%', metacritic: '39', cinemascore: 'D+', audience: '48%' },
+    boxOffice: '$27.8M opening weekend',
+    archived: false
+  },
+  {
+    id: 'the-social-reckoning',
+    title: 'The Social Reckoning',
+    status: '#5 at the box office',
+    poster: 'https://image.tmdb.org/t/p/w500/7jK6NuxVg1XuEV7UdNa6KO03IgZ.jpg',
+    tmdbId: 1281331,
+    director: 'Aaron Sorkin',
+    cast: ['Mikey Madison', 'Jeremy Allen White', 'Jeremy Strong', 'Bill Burr', 'Wunmi Mosaku', 'Betty Gilpin', 'Billy Magnussen'],
+    studio: 'Columbia Pictures',
+    mpaa: 'R',
+    runtime: '1h 52m',
+    genres: ['Drama', 'Biography', 'Thriller'],
+    color: 'linear-gradient(135deg, #0f1c2e 0%, #2b4a6f 55%, #1a1a1a 100%)',
+    rating: 3,
+    headline: "Sorkin goes back to Facebook. The talk is still sharp, the shock not so much.",
+    review: [
+      "Following up The Social Network is a brutal assignment. That movie basically predicted the decade. So I'll give Aaron Sorkin credit for not trying to make the same film again. This one isn't about how Facebook got built. It's about what it turned into, and who decided to say something.",
+      "Mikey Madison plays Frances Haugen, a data engineer on the company's Civic Integrity team who starts to realize the people above her keep choosing engagement over safety, every time. She ends up copying a mountain of internal documents and taking them to a Wall Street Journal reporter, played by Jeremy Allen White. From there it's a story about leaks, lawyers and how much one person can risk.",
+      "Madison is really good. She plays Haugen as careful and a little awkward, not a crusader, and it makes the stakes feel real. Her scenes with White have that classic Sorkin rhythm where two smart people talk fast and you lean in to keep up. When the movie's walking through what the company knew, it's honestly infuriating, in a good way.",
+      "Where it loses steam is that we already know most of this. The story played out in the news years ago, and the movie never finds a fresh angle that makes it hit like a revelation. It's also very speechy, even for Sorkin. A few big monologues feel like they're aimed at the audience instead of the other characters.",
+      "If you liked the first one or you're into true-story thrillers, it's a solid night out. Just don't expect it to rewire your brain the way the original did."
+    ],
+    bottomLine: "Well acted and worth a look, but it's a warning that shows up a few years late.",
+    scores: { rt: '55%', metacritic: '52', cinemascore: 'B-', audience: '73%' },
+    boxOffice: '$5.0M opening weekend',
+    archived: false
+  },
+  {
+    id: 'angel-and-the-badman',
+    title: 'Angel and the Badman',
+    status: '#10 at the box office',
+    poster: 'https://image.tmdb.org/t/p/w500/mJe53zlhGBdcjtN1GqncNZ5Unm0.jpg',
+    tmdbId: 1669915,
+    director: 'Julio Quintana',
+    cast: ['Zachary Levi', 'Neal McDonough', 'Tommy Lee Jones', 'Meg Fraser'],
+    studio: 'Angel Studios',
+    mpaa: 'PG-13',
+    runtime: '1h 45m',
+    genres: ['Western', 'Drama', 'Romance'],
+    color: 'linear-gradient(135deg, #3a1a0a 0%, #c0561c 55%, #f2c38a 100%)',
+    rating: 2,
+    headline: "A good-looking Western remake that mistakes preaching for heart.",
+    review: [
+      "I have a soft spot for old-fashioned Westerns, and on paper this one checks the boxes. Big skies, dusty towns, Tommy Lee Jones in a hat. It's a remake of the 1947 John Wayne movie, and that's a fine thing to dust off.",
+      "Zachary Levi plays Quirt Evans, an outlaw with a reputation and plenty of people who'd like to see him dead. The story is about what happens when a man like that gets a taste of a gentler life, and whether he can actually change or whether his past catches up with him first. Neal McDonough is on hand to make sure the past has a face.",
+      "It looks great. The sunsets are gorgeous, the costumes and sets feel lived in, and Tommy Lee Jones does that thing where he barely moves and still owns the scene. McDonough is always a good villain, and he's no exception here.",
+      "The problem is the romance and the message. The love story never really sparks, and the movie is so eager to tell you what it all means that it forgets to let you feel it. Levi is likable, but he's playing the redemption like a lesson instead of a struggle. The original had some bite. This one sands it all off.",
+      "Audiences seem a lot warmer on it than critics are, so if you want a clean, earnest Western to see with the family, it might hit the spot. If you want a great Western, go find the old one."
+    ],
+    bottomLine: "Pretty to look at and well meaning, but too busy sermonizing to ride anywhere exciting.",
+    scores: { rt: '23%', audience: '74%' },
+    boxOffice: '$2.1M opening weekend',
+    archived: false
+  },
+  {
     id: 'verity',
     title: 'Verity',
-    status: '#1 at the box office',
+    status: '#2 at the box office',
     poster: 'https://image.tmdb.org/t/p/w500/Lr0Ng7Gg02RW1AyfYEL6P0WUvd.jpg',
     tmdbId: 1283515,
     director: 'Michael Showalter',
@@ -31,14 +112,14 @@ var MOVIES = [
       "It's not a masterpiece, and it's certainly not Gone Girl, but it's a blast of a ride. If you love pulpy mysteries and powerhouse performances, this is your kind of movie."
     ],
     bottomLine: "Vapid at times, but addictive throughout. A perfect 'guilty pleasure' watch.",
-    scores: { rt: '34%', audience: '69%', metacritic: '45' },
-    boxOffice: '$33M opening weekend',
+    scores: { rt: '31%', metacritic: '44', cinemascore: 'C+', audience: '69%' },
+    boxOffice: '$54.4M total after 2 weeks',
     archived: false
   },
   {
     id: 'digger',
     title: 'Digger',
-    status: '#2 at the box office',
+    status: '#8 at the box office',
     poster: 'https://image.tmdb.org/t/p/w500/1ATXKrIPJyKNwnJ6lcG088Sa6zi.jpg',
     tmdbId: 1248832,
     director: 'Alejandro G. Iñárritu',
@@ -58,8 +139,8 @@ var MOVIES = [
       "Digger is a flawed, overstuffed, and frequently annoying movie, but it's also the most ambitious thing we've seen from Cruise in years. It's a bold misfire that's far more interesting than a safe success."
     ],
     bottomLine: "A chaotic, heavy-handed satire saved by a powerhouse lead performance.",
-    scores: { rt: '52%', audience: '72%', metacritic: '45' },
-    boxOffice: '$8.5M opening weekend',
+    scores: { rt: '53%', metacritic: '46', cinemascore: 'C+', audience: '72%' },
+    boxOffice: '$14.4M total after 2 weeks',
     archived: false
   },
   {
@@ -86,13 +167,13 @@ var MOVIES = [
     ],
     bottomLine: "Fast, gross and a total blast. Grab some friends and see it loud.",
     scores: { rt: '96%', metacritic: '79', cinemascore: 'B+', audience: '91%' },
-    boxOffice: '$120M total',
+    boxOffice: '$138.7M total after 4 weeks',
     archived: false
   },
   {
     id: 'primetime',
     title: 'Primetime',
-    status: '#4 at the box office',
+    status: '#7 at the box office',
     poster: 'https://image.tmdb.org/t/p/w500/2cxhvwyEwRlysAmRH4iodkvo0z5.jpg',
     tmdbId: 1375441,
     director: 'Lance Oppenheim',
@@ -113,13 +194,13 @@ var MOVIES = [
     ],
     bottomLine: "Intense, uncomfortable and brilliantly acted. A fascinating look at the dark side of reality TV.",
     scores: { rt: '96%', metacritic: '67' },
-    boxOffice: '$30M total',
+    boxOffice: '$41.5M total after 3 weeks',
     archived: false
   },
   {
     id: 'forgotten-island',
     title: 'Forgotten Island',
-    status: '#5 at the box office',
+    status: '#6 at the box office',
     poster: 'https://image.tmdb.org/t/p/w500/dGSsPovyUW5XVekXcy7F2GyhTEh.jpg',
     tmdbId: 1465063,
     director: 'Joel Crawford, Januel Mercado',
@@ -140,13 +221,13 @@ var MOVIES = [
     ],
     bottomLine: "Imaginative, heartfelt and visually gorgeous. A must-watch for families and animation fans.",
     scores: { rt: '95%', audience: '96%', metacritic: '73' },
-    boxOffice: '$20M total',
+    boxOffice: '$30.5M total after 3 weeks',
     archived: false
   },
   {
     id: 'heart-of-the-beast',
     title: 'Heart of the Beast',
-    status: 'Opens Fri., Sept. 25',
+    status: '#4 at the box office',
     poster: 'https://image.tmdb.org/t/p/w500/1ApfSA8JTqeha3GTFEY8syV4auq.jpg',
     tmdbId: 1263337,
     director: 'David Ayer',
@@ -162,11 +243,11 @@ var MOVIES = [
       "Brad Pitt plays James Belmont, a retired Special Forces guy whose plane goes down in the middle of nowhere in Alaska. The only other survivor is Odin, the combat dog who served alongside him. They're both banged up, they're both still carrying the war with them, and the only way home is to walk. The movie keeps cutting back to their time overseas, and those scenes do a lot of heavy lifting. By the time you're back in the snow, you understand these two aren't owner and pet. They're partners.",
       "Here's the detail that sold me: Odin is played by Uber, a real search-and-rescue dog, not a pile of CGI. That matters. You can feel the difference when an animal is actually reacting to the person in front of it. Pitt goes quieter than usual, and early word is that the dog is the one people are talking about on the drive home.",
       "The wilderness looks gorgeous one minute and deadly the next, and David Ayer uses that well. Where it slips is the action. Belmont does things with a body that is clearly failing him that no human being could do, and you just have to shrug and go with it. The trek also drags in places. You could argue that's the point, since you're supposed to feel every mile, but a tighter cut would've helped.",
-      "Early reviews are strong, and I get why. It's not a perfect movie. It's an honest one about loyalty, and that's enough to carry it."
+      "Critics and audiences are both on its side, and I get why. It's not a perfect movie. It's an honest one about loyalty, and that's enough to carry it."
     ],
     bottomLine: "A little far-fetched, a lot heartfelt. Dog people, this is your weekend.",
-    scores: { rt: '89%' },
-    boxOffice: 'Opens Sept. 25',
+    scores: { rt: '85%', metacritic: '66', cinemascore: 'A-', audience: '94%' },
+    boxOffice: '$50.0M total after 3 weeks',
     archived: false
   },
   {
@@ -226,7 +307,7 @@ var MOVIES = [
   {
     id: 'the-odyssey',
     title: 'The Odyssey',
-    status: '#4 at the box office',
+    status: '#9 at the box office',
     poster: 'https://image.tmdb.org/t/p/w500/5rhTDKUhPYvpdQIijFIs5VoWsON.jpg',
     tmdbId: 1368337,
     director: 'Christopher Nolan',
@@ -239,7 +320,7 @@ var MOVIES = [
     rating: 4.5,
     headline: "Christopher Nolan takes on a 3,000-year-old story and makes it feel like it was written yesterday.",
     review: [
-      "Ten weeks in, The Odyssey is still in the top five and has become the highest-grossing R-rated movie ever. That doesn't happen because of a marketing budget. It happens because people keep telling their friends to go.",
+      "Thirteen weeks in, The Odyssey just climbed back into the top ten, and it's the highest-grossing R-rated movie ever. That doesn't happen because of a marketing budget. It happens because people keep telling their friends to go.",
       "You probably know the story, even if it's been a while since school. The Trojan War is over, and Odysseus, the king of Ithaca, just wants to get home. It takes him ten years. Monsters, angry gods, islands you don't want to wash up on. Back home, his wife Penelope is holding off a houseful of men trying to take his place, and their son Telemachus is out searching for any sign his dad is still alive.",
       "Matt Damon plays Odysseus like a man who won the war and lost himself doing it. That's what gets me about this movie. It's huge and it's loud, but underneath it's about what winning actually costs, and about what people owe each other. That's a warmer, more human Nolan than we usually get, and it suits him.",
       "It also looks incredible. It was shot for 70mm, and the stop on Circe's island is the kind of sequence people walk out still arguing about how it was done. The cast is stacked. Robert Pattinson is a blast as one of the slimy suitors, John Leguizamo makes the most of a small role, and Zendaya gets a final scene that lands hard.",
@@ -247,8 +328,8 @@ var MOVIES = [
     ],
     bottomLine: "A massive, moving epic. See it on the biggest screen you can find, and hit the restroom first.",
     scores: { rt: '94%', audience: '96%' },
-    boxOffice: '$609.8M domestic after 10 weeks',
-    archived: true
+    boxOffice: '$623.1M domestic after 13 weeks',
+    archived: false
   },
   {
     id: 'coyote-vs-acme',

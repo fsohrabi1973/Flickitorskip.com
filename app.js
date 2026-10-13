@@ -35,7 +35,7 @@
   }
 
   function verdictLabel(n) {
-    return n >= 4 ? 'See it' : n >= 3.5 ? 'Worth it' : n >= 2.5 ? 'Maybe' : 'Skip it';
+    return n >= 4 ? 'Flick it' : n >= 3.5 ? 'Worth it' : n >= 2.5 ? 'Maybe' : 'Skip it';
   }
 
   function scoreChips(m) {

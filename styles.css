@@ -153,3 +153,19 @@ main { max-width: 1200px; margin: 0 auto; padding: 1.5rem 2rem 3rem; }
   .review-banner { flex-direction: column; align-items: flex-start; }
   .review-poster { width: 120px; }
 }
+
+/* Verdict key */
+.legend {
+  background: var(--card); border-radius: var(--radius);
+  padding: 1rem 1.25rem; margin-bottom: 1.25rem;
+}
+.legend-title {
+  margin: 0 0 .6rem; color: var(--muted);
+  font: 700 .8rem "Segoe UI", Arial, sans-serif; text-transform: uppercase; letter-spacing: 1px;
+}
+.legend-list {
+  list-style: none; margin: 0; padding: 0;
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: .75rem 1.25rem;
+  font: .88rem "Segoe UI", Arial, sans-serif; line-height: 1.45;
+}
+.legend-list .verdict-pill { position: static; display: inline-block; margin-right: .3rem; }
