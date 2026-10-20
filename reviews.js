@@ -3,15 +3,150 @@
 // Posters come from the TMDB image CDN (image.tmdb.org). TMDB's terms ask for attribution somewhere on the site.
 
 var SITE = {
-  updated: 'October 13, 2026',
-  boxOfficeWeekend: 'Oct. 9-11'
+  updated: 'October 20, 2026',
+  boxOfficeWeekend: 'Oct. 16-18'
 };
 
 var MOVIES = [
   {
+    id: 'street-fighter',
+    title: 'Street Fighter',
+    status: '#1 at the box office',
+    poster: 'https://image.tmdb.org/t/p/w500/pwUb3gdkSrlyMZWs0MFOQg3N5s7.jpg',
+    tmdbId: 1153576,
+    director: 'Kitao Sakurai',
+    cast: ['Andrew Koji', 'Noah Centineo', 'Callina Liang', 'David Dastmalchian', "Joe Anoa'i", 'Cody Rhodes', 'Eric André'],
+    studio: 'Paramount Pictures',
+    mpaa: 'PG-13',
+    runtime: '1h 59m',
+    genres: ['Action', 'Adventure', 'Fantasy'],
+    color: 'linear-gradient(135deg, #1a0a2e 0%, #c2185b 50%, #f9a825 100%)',
+    rating: 2.5,
+    headline: 'The fights land. Everything between them is a button-mash.',
+    review: [
+      'Street Fighter has been waiting a long time for a decent movie. The earlier attempts were camp at best, so a new one with a real budget and an actual fight team behind it sounded like it might finally get there. It gets about halfway, and that half is a lot of fun.',
+      "Chun-Li is an undercover Interpol agent who wants the man behind her father's murder. That man is M. Bison, a dictator who runs a martial arts tournament, and he's got his eye on Ryu, a fighter with something darker in him than he lets on. Chun-Li pulls Ryu and his old friend Ken into the tournament, and the brackets start filling up with faces fans will know.",
+      "When people are punching each other, it's good. Kitao Sakurai clearly loves the games, and the fights are staged with real snap, full of moves you'll recognize without the movie stopping to wink at you every time. Andrew Koji makes a solid, quiet Ryu, and David Dastmalchian is having a ball as Bison. The whole thing pops with color like a character select screen.",
+      "The story's a mess, though. It hops between plot threads without much reason, the jokes skew juvenile, and it can't decide if it's a goofy romp or a revenge drama. Some of the wrestlers and comedians in the cast are fun in small doses and stiff in bigger ones. At almost two hours, the stretches between fights start to drag.",
+      "If you love the games, there's enough here for a matinee, and kids seem to be eating it up. If you're not already a fan, nothing in it is going to make you one."
+    ],
+    bottomLine: "Great fights stuck in a movie that doesn't know what to do between rounds.",
+    scores: { rt: '40%', metacritic: '44', cinemascore: 'B-', audience: '79%' },
+    boxOffice: '$30.8M opening weekend',
+    archived: false
+  },
+  {
+    id: 'you-can-see-everything',
+    title: 'You Can See Everything',
+    status: '#2 at the box office',
+    poster: 'https://image.tmdb.org/t/p/w500/Ap8QwmKfSjYbWC4XIP8w9pdn72O.jpg',
+    tmdbId: 1765072,
+    director: 'Nathan Fielder and Lance Oppenheim',
+    cast: ['Elizabeth Holmes', 'Billy Evans', 'Nathan Fielder', 'Amanda Seyfried', 'Christopher Abbott'],
+    studio: 'A24',
+    mpaa: 'R',
+    runtime: '2h 54m',
+    genres: ['Documentary'],
+    color: 'linear-gradient(135deg, #0b1a24 0%, #3d6e80 55%, #e8d9b5 100%)',
+    rating: 4.5,
+    headline: "Nathan Fielder points a camera at Elizabeth Holmes, and you won't shake it for days.",
+    review: [
+      "I didn't think there was anything left to say about Elizabeth Holmes. We've had the books, the podcast and the miniseries. Then Nathan Fielder got involved, and of course he found a stranger way into the whole thing than anybody else would have.",
+      'In 2023, a little over a month before Holmes reported to prison for the Theranos fraud, she and her partner Billy Evans let filmmakers into their lives. Fielder and co-director Lance Oppenheim set up at a rented beach house in Del Mar, and what starts as a film about her last days of freedom keeps turning into something else. Amanda Seyfried and Christopher Abbott turn up too, playing the couple in reenactments, which is about as Fielder as it gets.',
+      "It works because it's so patient. Fielder asks plain questions in that flat, awkward way of his and then just waits, and the silences say more than the answers do. You spend the whole movie trying to figure out what's real with Holmes, and it's smart enough not to settle that for you. It's funny and uncomfortable and kind of sad, sometimes all in the same minute.",
+      "It's also nearly three hours, and you feel that in places. If you want a deep dig into how Theranos actually pulled off its con, this isn't that movie. It's much more about the person and the camera than the company, and some people are going to find Fielder's games with his subject a little too pleased with themselves.",
+      "Go anyway. This is one of the most talked-about movies of the year for good reason, and it's the kind you'll want to argue about on the drive home. Just eat first."
+    ],
+    bottomLine: 'A weird, gripping portrait that leaves you arguing with yourself about who you just spent three hours with.',
+    scores: { rt: '98%', metacritic: '97', audience: '98%' },
+    boxOffice: '$15.6M opening weekend',
+    archived: false
+  },
+  {
+    id: 'whalefall',
+    title: 'Whalefall',
+    status: '#4 at the box office',
+    poster: 'https://image.tmdb.org/t/p/w500/vjTYUTgh9nO88i6HZ4YPRhiFL05.jpg',
+    tmdbId: 1255833,
+    director: 'Brian Duffield',
+    cast: ['Austin Abrams', 'Josh Brolin', 'Elisabeth Shue', 'John Ortiz', 'Jane Levy', 'Emily Rudd'],
+    studio: '20th Century Studios',
+    mpaa: 'PG-13',
+    runtime: '1h 46m',
+    genres: ['Thriller', 'Adventure', 'Drama'],
+    color: 'linear-gradient(135deg, #021a2b 0%, #0d4d6b 55%, #5fa8b8 100%)',
+    rating: 3,
+    headline: 'A kid gets swallowed by a whale. The best parts are exactly as wild as that sounds.',
+    review: [
+      "Every so often a movie shows up with a pitch so ridiculous you have to respect it. Whalefall is a survival thriller where the danger isn't a shark or a storm. It's the inside of a whale. I'm in.",
+      'Austin Abrams plays Jay, a college kid who goes on a solo dive off the California coast to recover the remains of his estranged father, played in flashbacks by Josh Brolin. Then a sperm whale swallows him whole. Now he has to stay alive in there using everything his dad drilled into him, with his air running low and no obvious way out.',
+      "The stuff inside the whale is the reason to buy a ticket. Brian Duffield has a real knack for strange, physical set pieces, and the movie gets properly claustrophobic. Abrams carries a lot of it alone, and he's believable as a guy who's terrified but too stubborn to quit. It's a big-screen movie for sure.",
+      "The flashbacks are where it sags. Every time we cut back to Jay and his dad, the tension leaks out, and the father-son stuff gets sappy in a way the rest of the film doesn't need. You'll also have to let go of some questions about how any of this is physically possible. If that kind of thing bugs you, this will bug you a lot.",
+      "If you like your thrillers high-concept and a little nuts, it's worth a look. Just know going in that it's better at the whale than at the feelings."
+    ],
+    bottomLine: "A gutsy, goofy survival ride that's at its best when it stays inside the whale.",
+    scores: { rt: '72%', metacritic: '59', cinemascore: 'B', audience: '82%' },
+    boxOffice: '$7.8M opening weekend',
+    archived: false
+  },
+  {
+    id: 'sense-and-sensibility',
+    title: 'Sense and Sensibility',
+    status: '#5 at the box office',
+    poster: 'https://image.tmdb.org/t/p/w500/czsyPHosFNbh4PPqXfqWu1aBXnA.jpg',
+    tmdbId: 1503762,
+    director: 'Georgia Oakley',
+    cast: ['Daisy Edgar-Jones', 'Esmé Creed-Miles', 'Caitríona Balfe', 'George MacKay', 'Frank Dillane', 'Fiona Shaw'],
+    studio: 'Focus Features',
+    mpaa: 'PG',
+    runtime: '2h 12m',
+    genres: ['Drama', 'Romance'],
+    color: 'linear-gradient(135deg, #2b3a2e 0%, #8aa38b 55%, #f1e3cf 100%)',
+    rating: 3.5,
+    headline: 'Another Austen adaptation, and this one earns its spot by putting the sisters first.',
+    review: [
+      "Sense and Sensibility already has a version a lot of people consider untouchable, so any new one starts in a hole. I was skeptical on paper. This one doesn't try to beat the old favorite, and that turns out to be the smart move.",
+      "When their father dies and the estate goes to their half-brother, the Dashwood sisters and their mother lose their money and their home and end up in a small cottage in the country. Elinor, the practical one, falls quietly for the reserved Edward Ferrars. Marianne, who feels everything at full volume, gets swept off her feet by the dashing Willoughby. You probably know where it's headed. Getting there is the point.",
+      "Georgia Oakley makes the bond between the sisters the heart of the movie, and that's what gives it its own personality. Daisy Edgar-Jones and Esmé Creed-Miles are lovely together, and the whole thing has a soft, wistful look that makes you want to move to the English countryside and stop answering email. Caitríona Balfe is warm as their mother, and the costumes and locations are gorgeous.",
+      "It doesn't really surprise you, though. If you've seen the earlier film, a lot of this will feel familiar, and at a little over two hours it takes its sweet time. The romances, Edward's especially, feel a bit muted next to the sisters' story.",
+      "Austen fans and anyone who loves a good period piece should go, and it'd make a great outing with your mom or your sister. If corsets and longing looks aren't your thing, nothing here is going to convert you."
+    ],
+    bottomLine: "A handsome, heartfelt take that's more about sisters than suitors, and better for it.",
+    scores: { rt: '77%', metacritic: '71', cinemascore: 'A-', audience: '88%' },
+    boxOffice: '$7.2M opening weekend',
+    archived: false
+  },
+  {
+    id: 'jailer-2',
+    title: 'Jailer 2',
+    status: '#9 at the box office',
+    poster: 'https://image.tmdb.org/t/p/w500/upwdEyhhYZ7pT2hD535fr2MGfpx.jpg',
+    tmdbId: 1234139,
+    director: 'Nelson Dilipkumar',
+    cast: ['Rajinikanth', 'S. J. Suryah', 'Mithun Chakraborty', 'Suraj Venjaramoodu', 'Ramya Krishnan', 'Vidya Balan'],
+    studio: 'Sun Pictures',
+    mpaa: 'Not Rated',
+    runtime: '2h 55m',
+    genres: ['Action', 'Comedy', 'Crime'],
+    color: 'linear-gradient(135deg, #1a0f00 0%, #8a4b08 55%, #e0a030 100%)',
+    rating: 3,
+    headline: 'Rajinikanth is still the coolest man on any screen. The movie around him is more crowded than it needs to be.',
+    review: [
+      'A new Rajinikanth movie is an event, and Jailer 2 cracked the top 10 here in the States from barely 400 screens. The first Jailer was a big, swaggering hit, so the sequel had a lot to live up to.',
+      "It picks up a few months after the first film. Muthuvel Pandian, the retired jailer nobody should have messed with, is trying to live quietly near the Kerala border. Then the people behind the gang he took down work out who did it, his family's in danger again, and he goes undercover inside a statue-smuggling ring to handle it his way.",
+      "Rajinikanth is the whole show and he knows it. Every slow walk and every look over the sunglasses is built to make a theater cheer, and it does the job. Nelson Dilipkumar's dark, deadpan humor is back too, and the best stretches have that mix of goofy and menacing that made the first one so much fun. S. J. Suryah is a strong addition.",
+      "The second half is the problem. It slows way down, the plot gets stuffed with characters and side threads, and at close to three hours you'll feel every one of them. It works in big chunks rather than all the way through, and it never quite hits the high of the original.",
+      "If you loved the first Jailer or you're a Rajini fan, you're going no matter what I say, and you'll have a good time. If you're new to all this, start with the first one at home."
+    ],
+    bottomLine: "A crowd-pleasing star vehicle that's a blast in bursts and a slog in between.",
+    scores: { rt: '85%', audience: '93%' },
+    boxOffice: '$3.3M opening weekend',
+    archived: false
+  },
+  {
     id: 'other-mommy',
     title: 'Other Mommy',
-    status: '#1 at the box office',
+    status: '#3 at the box office',
     poster: 'https://image.tmdb.org/t/p/w500/fGRNCssTRrhYZxNzykGGCoMsAVq.jpg',
     tmdbId: 1400837,
     director: 'Rob Savage',
@@ -31,14 +166,14 @@ var MOVIES = [
       "It made a pile of money because the hook is that good. If you're a horror completist, you'll find a couple of scenes to like. Everybody else can wait for streaming, or just call their own mom."
     ],
     bottomLine: "A killer premise and a fearless lead, buried under a movie that can't keep a straight face.",
-    scores: { rt: '17%', metacritic: '39', cinemascore: 'D+', audience: '48%' },
-    boxOffice: '$27.8M opening weekend',
+    scores: { rt: '18%', metacritic: '39', cinemascore: 'D+', audience: '48%' },
+    boxOffice: '$44.7M total after 2 weeks',
     archived: false
   },
   {
     id: 'the-social-reckoning',
     title: 'The Social Reckoning',
-    status: '#5 at the box office',
+    status: '#13 at the box office',
     poster: 'https://image.tmdb.org/t/p/w500/7jK6NuxVg1XuEV7UdNa6KO03IgZ.jpg',
     tmdbId: 1281331,
     director: 'Aaron Sorkin',
@@ -58,14 +193,14 @@ var MOVIES = [
       "If you liked the first one or you're into true-story thrillers, it's a solid night out. Just don't expect it to rewire your brain the way the original did."
     ],
     bottomLine: "Well acted and worth a look, but it's a warning that shows up a few years late.",
-    scores: { rt: '55%', metacritic: '52', cinemascore: 'B-', audience: '73%' },
-    boxOffice: '$5.0M opening weekend',
-    archived: false
+    scores: { rt: '54%', metacritic: '51', cinemascore: 'B-', audience: '71%' },
+    boxOffice: '$8.1M total after 2 weeks',
+    archived: true
   },
   {
     id: 'angel-and-the-badman',
     title: 'Angel and the Badman',
-    status: '#10 at the box office',
+    status: '#19 at the box office',
     poster: 'https://image.tmdb.org/t/p/w500/mJe53zlhGBdcjtN1GqncNZ5Unm0.jpg',
     tmdbId: 1669915,
     director: 'Julio Quintana',
@@ -85,14 +220,14 @@ var MOVIES = [
       "Audiences seem a lot warmer on it than critics are, so if you want a clean, earnest Western to see with the family, it might hit the spot. If you want a great Western, go find the old one."
     ],
     bottomLine: "Pretty to look at and well meaning, but too busy sermonizing to ride anywhere exciting.",
-    scores: { rt: '23%', audience: '74%' },
-    boxOffice: '$2.1M opening weekend',
-    archived: false
+    scores: { rt: '23%', audience: '77%' },
+    boxOffice: '$3.6M total after 2 weeks',
+    archived: true
   },
   {
     id: 'verity',
     title: 'Verity',
-    status: '#2 at the box office',
+    status: '#6 at the box office',
     poster: 'https://image.tmdb.org/t/p/w500/Lr0Ng7Gg02RW1AyfYEL6P0WUvd.jpg',
     tmdbId: 1283515,
     director: 'Michael Showalter',
@@ -112,14 +247,14 @@ var MOVIES = [
       "It's not a masterpiece, and it's certainly not Gone Girl, but it's a blast of a ride. If you love pulpy mysteries and powerhouse performances, this is your kind of movie."
     ],
     bottomLine: "Vapid at times, but addictive throughout. A perfect 'guilty pleasure' watch.",
-    scores: { rt: '31%', metacritic: '44', cinemascore: 'C+', audience: '69%' },
-    boxOffice: '$54.4M total after 2 weeks',
+    scores: { rt: '31%', metacritic: '44', cinemascore: 'C+', audience: '71%' },
+    boxOffice: '$65.9M total after 3 weeks',
     archived: false
   },
   {
     id: 'digger',
     title: 'Digger',
-    status: '#8 at the box office',
+    status: '#15 at the box office',
     poster: 'https://image.tmdb.org/t/p/w500/1ATXKrIPJyKNwnJ6lcG088Sa6zi.jpg',
     tmdbId: 1248832,
     director: 'Alejandro G. Iñárritu',
@@ -139,14 +274,14 @@ var MOVIES = [
       "Digger is a flawed, overstuffed, and frequently annoying movie, but it's also the most ambitious thing we've seen from Cruise in years. It's a bold misfire that's far more interesting than a safe success."
     ],
     bottomLine: "A chaotic, heavy-handed satire saved by a powerhouse lead performance.",
-    scores: { rt: '53%', metacritic: '46', cinemascore: 'C+', audience: '72%' },
-    boxOffice: '$14.4M total after 2 weeks',
-    archived: false
+    scores: { rt: '53%', metacritic: '46', cinemascore: 'C+', audience: '76%' },
+    boxOffice: '$17.2M total after 3 weeks',
+    archived: true
   },
   {
     id: 'resident-evil',
     title: 'Resident Evil',
-    status: '#3 at the box office',
+    status: '#7 at the box office',
     poster: 'https://image.tmdb.org/t/p/w500/i7UyjfPio0VFHB9rBUZSFyhOoM8.jpg',
     tmdbId: 1423191,
     director: 'Zach Cregger',
@@ -159,21 +294,21 @@ var MOVIES = [
     rating: 4.5,
     headline: "Twenty-plus years of bad Resident Evil movies, and this is the one that finally gets it.",
     review: [
-      "Let me be real with you. I did not expect to be writing a rave for a Resident Evil movie in 2026. This franchise has been rebooted so many times that the name alone used to make people groan. And yet here we are, with the best-reviewed movie in the whole series sitting at number one.",
+      "Let me be real with you. I did not expect to be writing a rave for a Resident Evil movie in 2026. This franchise has been rebooted so many times that the name alone used to make people groan. And yet here we are, with the best-reviewed movie in the whole series still packing theaters a month in.",
       "Zach Cregger, the guy behind Barbarian, keeps it small and mean. Austin Abrams plays Bryan, a medical courier who just needs to drop a package at Raccoon City General, up in the snowy Colorado mountains. On the way in he hits someone with his car, and from there the night falls apart. There's an outbreak. There are things in the halls that used to be patients. And that package he's carrying turns out to be the one thing the doctors need to stop it. That's the whole movie: one guy, one hospital, one very bad night, done in about ninety minutes.",
       "What makes it work is that Cregger isn't trying to cram twenty years of game lore onto the screen. He's going after how those games feel. The dread before you open a door. Running low on ammo. Laughing because you're scared. Most of the monsters are practical effects, not CGI, and the creature work goes to some seriously gross places. You don't need to have played a single game to get it.",
       "Abrams plays a regular guy who is completely out of his depth. He talks to himself the whole way through, which is exactly what any of us would do, and it makes him easy to root for. Sara Paxton only shows up as a voice on the phone, and she still manages to rattle you.",
       "My one knock: the last stretch piles on so much action that it starts to wear you out, and if you want slow-burn scares, this leans more fun than frightening. But honestly? I'll take fun. After all these years, this series finally has a movie worth defending."
     ],
     bottomLine: "Fast, gross and a total blast. Grab some friends and see it loud.",
-    scores: { rt: '96%', metacritic: '79', cinemascore: 'B+', audience: '91%' },
-    boxOffice: '$138.7M total after 4 weeks',
+    scores: { rt: '96%', metacritic: '79', cinemascore: 'B+', audience: '90%' },
+    boxOffice: '$148.5M total after 5 weeks',
     archived: false
   },
   {
     id: 'primetime',
     title: 'Primetime',
-    status: '#7 at the box office',
+    status: '#12 at the box office',
     poster: 'https://image.tmdb.org/t/p/w500/2cxhvwyEwRlysAmRH4iodkvo0z5.jpg',
     tmdbId: 1375441,
     director: 'Lance Oppenheim',
@@ -193,14 +328,14 @@ var MOVIES = [
       "It's a disturbing, focused character study that manages to be both a critique of the media and a gripping thriller. It's not for everyone, but if you're in the mood for something that challenges your stomach and your ethics, this is it."
     ],
     bottomLine: "Intense, uncomfortable and brilliantly acted. A fascinating look at the dark side of reality TV.",
-    scores: { rt: '96%', metacritic: '67' },
-    boxOffice: '$41.5M total after 3 weeks',
-    archived: false
+    scores: { rt: '86%', metacritic: '67', cinemascore: 'B', audience: '77%' },
+    boxOffice: '$45.3M total after 4 weeks',
+    archived: true
   },
   {
     id: 'forgotten-island',
     title: 'Forgotten Island',
-    status: '#6 at the box office',
+    status: '#10 at the box office',
     poster: 'https://image.tmdb.org/t/p/w500/dGSsPovyUW5XVekXcy7F2GyhTEh.jpg',
     tmdbId: 1465063,
     director: 'Joel Crawford, Januel Mercado',
@@ -220,14 +355,14 @@ var MOVIES = [
       "Despite that, the heart of the movie is undeniable. It's a story about the fear of growing apart and the effort it takes to hold onto the people who define you. It's a movie that will make you want to call your best friend the second the credits roll."
     ],
     bottomLine: "Imaginative, heartfelt and visually gorgeous. A must-watch for families and animation fans.",
-    scores: { rt: '95%', audience: '96%', metacritic: '73' },
-    boxOffice: '$30.5M total after 3 weeks',
+    scores: { rt: '94%', metacritic: '74', cinemascore: 'A', audience: '95%' },
+    boxOffice: '$35.2M total after 4 weeks',
     archived: false
   },
   {
     id: 'heart-of-the-beast',
     title: 'Heart of the Beast',
-    status: '#4 at the box office',
+    status: '#8 at the box office',
     poster: 'https://image.tmdb.org/t/p/w500/1ApfSA8JTqeha3GTFEY8syV4auq.jpg',
     tmdbId: 1263337,
     director: 'David Ayer',
@@ -247,7 +382,7 @@ var MOVIES = [
     ],
     bottomLine: "A little far-fetched, a lot heartfelt. Dog people, this is your weekend.",
     scores: { rt: '85%', metacritic: '66', cinemascore: 'A-', audience: '94%' },
-    boxOffice: '$50.0M total after 3 weeks',
+    boxOffice: '$58.2M total after 4 weeks',
     archived: false
   },
   {
@@ -307,7 +442,7 @@ var MOVIES = [
   {
     id: 'the-odyssey',
     title: 'The Odyssey',
-    status: '#9 at the box office',
+    status: '#17 at the box office',
     poster: 'https://image.tmdb.org/t/p/w500/5rhTDKUhPYvpdQIijFIs5VoWsON.jpg',
     tmdbId: 1368337,
     director: 'Christopher Nolan',
@@ -327,9 +462,9 @@ var MOVIES = [
       "Is it long? Yes. Nearly three hours, and your back will let you know. Nolan also takes some liberties with Homer that purists are grumbling about, and a few characters get less room than they deserve. Bring back the intermission, please. But this is the kind of movie theaters were made for."
     ],
     bottomLine: "A massive, moving epic. See it on the biggest screen you can find, and hit the restroom first.",
-    scores: { rt: '94%', audience: '96%' },
-    boxOffice: '$623.1M domestic after 13 weeks',
-    archived: false
+    scores: { rt: '94%', metacritic: '88', cinemascore: 'A', audience: '96%' },
+    boxOffice: '$624.9M domestic after 14 weeks',
+    archived: true
   },
   {
     id: 'coyote-vs-acme',
