@@ -3,11 +3,146 @@
 // Posters come from the TMDB image CDN (image.tmdb.org). TMDB's terms ask for attribution somewhere on the site.
 
 var SITE = {
-  updated: 'October 20, 2026',
+  updated: 'October 23, 2026',
   boxOfficeWeekend: 'Oct. 16-18'
 };
 
 var MOVIES = [
+  {
+    id: 'wildwood',
+    title: 'Wildwood',
+    status: 'Opens Fri., Oct. 23',
+    poster: 'https://image.tmdb.org/t/p/w500/snFM00mpNAfUzUtkdEW0uDEvXA0.jpg',
+    tmdbId: 791523,
+    director: 'Travis Knight',
+    cast: ['Peyton Elizabeth Lee', 'Jacob Tremblay', 'Carey Mulligan', 'Mahershala Ali', 'Awkwafina', 'Angela Bassett'],
+    studio: 'Laika / Fathom Entertainment',
+    mpaa: 'PG-13',
+    runtime: '2h 12m',
+    genres: ['Animation', 'Fantasy', 'Adventure'],
+    color: 'linear-gradient(135deg, #0f1f14 0%, #3e6b3a 50%, #d9a441 100%)',
+    rating: 4.5,
+    headline: 'Laika swings for the fences, and every frame was built by hand.',
+    review: [
+      "I'll go see anything Laika makes. Coraline, Kubo, ParaNorman. This studio keeps proving stop-motion can do things a computer just can't fake, and Wildwood is the biggest thing they've ever tried. It's also the longest stop-motion feature anybody has made, which tells you how much they believed in it.",
+      "It's based on the Colin Meloy and Carson Ellis novel. Prue is a teenager whose baby brother Mac gets carried off by a murder of crows, right into the forest everyone in Portland knows not to go near. She heads in after him with her classmate Curtis tagging along, and the woods turn out to be a whole hidden country with its own rulers, its own grudges and a war brewing.",
+      "The craft is ridiculous. Hundreds of puppets, more than a hundred sets, and faces so expressive you forget they're tiny figures someone moved a fraction at a time. Travis Knight directed Kubo, and he's got that same feel for scale, so the forest feels huge and old and a little dangerous. The voice cast is stacked, too, with Carey Mulligan and Mahershala Ali in the mix.",
+      "Is it long? Yeah. Over two hours is a lot to ask of younger kids, and there's a lot of world-building and factions to keep straight. The PG-13 is there for a reason. This gets dark and scary in the way the best fairy tales do, so I wouldn't bring a five-year-old.",
+      "For older kids, teens and any adult who loves animation, this is the one to see on the biggest screen you can find. Movies made like this don't come along very often."
+    ],
+    bottomLine: "A handmade fantasy epic that's a little long and absolutely worth it.",
+    scores: { rt: '100%', metacritic: '87', audience: '98%' },
+    boxOffice: 'Opens Oct. 23 (tracking for a $15-21M opening)',
+    archived: false
+  },
+  {
+    id: 'wicker',
+    title: 'Wicker',
+    status: 'Opens Fri., Oct. 23',
+    poster: 'https://image.tmdb.org/t/p/w500/6FcBZOKvyrLCKGCyBG0ySCR4okt.jpg',
+    tmdbId: 1195803,
+    director: 'Alex Huston Fischer and Eleanor Wilson',
+    cast: ['Olivia Colman', 'Alexander Skarsgård', 'Elizabeth Debicki', 'Peter Dinklage', 'Richard E. Grant'],
+    studio: 'Black Bear Pictures',
+    mpaa: 'R',
+    runtime: '1h 45m',
+    genres: ['Fantasy', 'Romance', 'Comedy'],
+    color: 'linear-gradient(135deg, #1c2a33 0%, #6b5a3e 50%, #e0c48a 100%)',
+    rating: 4,
+    headline: 'Olivia Colman falls for a man made of baskets, and somehow it works.',
+    review: [
+      "This is the strangest pitch of the fall, and I mean that as a compliment. Olivia Colman marries a husband made out of wicker. That's the movie. I was sold the second I heard it.",
+      "Colman plays a fisherwoman in a medieval village who's spent years being mocked for never marrying. Half as a joke, she pays the local basket weaver to make her a husband. Then he comes to life. He's played by Alexander Skarsgård, and the two of them actually fall for each other, which does not sit well with a town that's very sure about how things are supposed to go.",
+      "Colman can make you laugh and break your heart in the same scene, and a story like this gives her room to do both. Skarsgård has a tricky job playing a man who's brand new to everything, and the word is he finds something sweet in it instead of something silly. Peter Dinklage, Elizabeth Debicki and Richard E. Grant fill out the village, which is about as good a bench as you could ask for. It's based on a short story, and it still has that fable feel.",
+      "It's a small, odd movie, and it knows it. If you need your romances grounded, a woven husband may be a bridge too far. It's rated R for nudity and sexual content, so this isn't the fairy tale to bring the kids to, whatever the poster looks like.",
+      "If you like your love stories weird and warm, and you'll watch Colman in anything, go. This is the kind of original movie that only survives if people show up for it."
+    ],
+    bottomLine: "A sweet, funny, genuinely odd fairy tale for grown-ups, carried by Olivia Colman.",
+    scores: { rt: '92%', metacritic: '71', audience: '94%' },
+    boxOffice: 'Opens Oct. 23 (tracking for a $6-8M opening)',
+    archived: false
+  },
+  {
+    id: 'clayface',
+    title: 'Clayface',
+    status: 'Opens Fri., Oct. 23',
+    poster: 'https://image.tmdb.org/t/p/w500/9l1NuFjel2j89hiuiJbsxfblqjy.jpg',
+    tmdbId: 1400940,
+    director: 'James Watkins',
+    cast: ['Tom Rhys Harries', 'Naomi Ackie', 'David Dencik', 'Max Minghella', 'Eddie Marsan'],
+    studio: 'DC Studios / Warner Bros. Pictures',
+    mpaa: 'R',
+    runtime: '1h 48m',
+    genres: ['Horror', 'Superhero'],
+    color: 'linear-gradient(135deg, #0a0a0a 0%, #4a1c14 55%, #b5651d 100%)',
+    rating: 3.5,
+    headline: "DC finally makes a horror movie, and it isn't afraid to get gross.",
+    review: [
+      "A Batman villain movie with no Batman sounds like a spin-off nobody asked for. Then you hear it's an R-rated body horror film, co-written by Mike Flanagan, and suddenly it's a lot more interesting. This is DC's first real swing at horror, and it's just in time for Halloween.",
+      "Matt Hagen is a Gotham kid who made it big in Hollywood, right up to an Oscar nomination. Then someone attacks him and wrecks his face, and his career goes with it. Desperate, he goes to a fringe scientist with an experimental treatment. It works, sort of. He heals, and he finds out he can reshape himself into anyone, but every change costs him a little more of his grip on who he actually is.",
+      "Tom Rhys Harries has the hard job here, and he makes Hagen someone you feel for even as he's falling apart. The movie goes all in on the body horror, so if you came for melting faces and stretching skin, you'll get your money's worth. It plays more like a tragedy than a superhero story, and that's the smartest choice it makes.",
+      "It doesn't totally hold together. The tone wobbles between serious character study and goopy creature feature, and opinion on whether the two halves fit is all over the place. If you're squeamish at all, take that R seriously. It's rated for strong bloody violence and gore, and it earns it.",
+      "Horror fans and anyone tired of the same old superhero formula should check it out. Audiences are liking it a lot more than critics are, which usually means it's a fun night out. If you just want capes and punching, this isn't that."
+    ],
+    bottomLine: "A messy but bold DC horror movie with a strong lead and gloriously gross effects.",
+    scores: { rt: '76%', metacritic: '59', audience: '94%' },
+    boxOffice: 'Opens Oct. 23 (tracking for a $25-35M opening)',
+    archived: false
+  },
+  {
+    id: 'a-talent-for-murder',
+    title: 'A Talent for Murder',
+    status: 'Opens Fri., Oct. 23',
+    poster: 'https://image.tmdb.org/t/p/w500/mstDPKNKgSGFvVFVdfzeMNkcyw2.jpg',
+    tmdbId: 1084409,
+    director: 'Anton Corbijn',
+    cast: ['Helen Mirren', 'Alden Ehrenreich', 'Olivia Cooke', 'Juliet Stevenson'],
+    studio: 'Bleecker Street',
+    mpaa: 'R',
+    runtime: '1h 46m',
+    genres: ['Mystery', 'Thriller', 'Drama'],
+    color: 'linear-gradient(135deg, #1a0d0d 0%, #5c1a1a 50%, #a68a64 100%)',
+    rating: 3.5,
+    headline: 'Helen Mirren plays Patricia Highsmith, and she bites.',
+    review: [
+      "Helen Mirren playing Patricia Highsmith, the woman who created Tom Ripley, is the kind of casting that makes you buy a ticket on the spot. Highsmith was famously prickly and difficult. Mirren can do prickly in her sleep.",
+      "It's based on the play Switzerland. A young man from New York, played by Alden Ehrenreich, shows up at Highsmith's isolated house in Switzerland. His job is to talk her into writing one last Ripley novel. She has no interest in him or his offer, and the more he pushes, the more the visit turns into something a lot more dangerous than a book deal.",
+      "This lives and dies on its two leads, and it mostly lives. Mirren as a sharp, cruel, funny Highsmith picking this kid apart is reason enough to go. Anton Corbijn has always been good at cold, moody atmosphere, which suits a story about a writer who spent her life thinking about murder. Ripley fans should get a kick out of how it plays with her own books.",
+      "You can feel the stage play underneath it. It's mostly two people in a house talking, and if that's not your thing, the stretches between the big confrontations are going to feel slow. Ehrenreich is up against Mirren, too, and that's a tough fight for anybody.",
+      "If you like talky, twisty thrillers, or you've ever read a Highsmith book, this is a good grown-up night at the movies. If you want action, look somewhere else."
+    ],
+    bottomLine: "A chilly two-hander with Helen Mirren having a wicked good time at its center.",
+    scores: { rt: '77%', metacritic: '67' },
+    boxOffice: 'Opens Oct. 23',
+    archived: false
+  },
+  {
+    id: 'klara-and-the-sun',
+    title: 'Klara and the Sun',
+    status: 'Opens Fri., Oct. 23',
+    poster: 'https://image.tmdb.org/t/p/w500/xqovj2p6HRsgHxN81qYAYF4StgM.jpg',
+    tmdbId: 858035,
+    director: 'Taika Waititi',
+    cast: ['Jenna Ortega', 'Amy Adams', 'Mia Tharia', 'Aran Murphy', 'Steve Buscemi', 'Natasha Lyonne'],
+    studio: 'Columbia Pictures / Sony Pictures',
+    mpaa: 'PG-13',
+    runtime: '1h 56m',
+    genres: ['Sci-Fi', 'Drama'],
+    color: 'linear-gradient(135deg, #0e2a33 0%, #3f8f8a 55%, #f2c14e 100%)',
+    rating: 2,
+    headline: 'A quiet, aching novel gets a director who can never sit still.',
+    review: [
+      "Kazuo Ishiguro's novel is one of the saddest, gentlest books I know. Hearing Taika Waititi would direct it made me nervous, because gentle is not really his thing. Turns out that worry was fair.",
+      "Jenna Ortega plays Klara, an Artificial Friend, basically a robot companion sold to keep lonely kids company. She's bought by a family whose daughter Josie is seriously ill. Klara watches everything, tries to understand the people around her, and puts a strange, almost religious faith in the sun. Amy Adams plays Josie's mother, who has her own reasons for wanting Klara close.",
+      "On paper it's a great cast. Ortega is a smart choice for someone who's always watching and trying to figure humans out, and Amy Adams knows how to play a mother holding it together by a thread. Steve Buscemi and Natasha Lyonne round it out.",
+      "The problem is the jokes. This story needs room to be still and sad, and the movie keeps undercutting its own big moments with goofy humor, then turning around and leaning hard on sentiment. Instead of the slow ache of the book, you get mood whiplash. It also never digs into the questions about people and AI that make the novel stick with you. Even the studio seems to have lost faith, cutting its theater count way down before opening.",
+      "If you love the book, I'd reread it instead. If you're curious, it'll be on streaming soon enough."
+    ],
+    bottomLine: "A great cast can't save an adaptation that jokes its way right past the heart of the story.",
+    scores: { rt: '23%', metacritic: '30' },
+    boxOffice: 'Opens Oct. 23 in about 850 theaters (tracking around $2M)',
+    archived: false
+  },
   {
     id: 'street-fighter',
     title: 'Street Fighter',
