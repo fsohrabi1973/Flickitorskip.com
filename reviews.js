@@ -3,15 +3,123 @@
 // Posters come from the TMDB image CDN (image.tmdb.org). TMDB's terms ask for attribution somewhere on the site.
 
 var SITE = {
-  updated: 'October 23, 2026',
-  boxOfficeWeekend: 'Oct. 16-18'
+  updated: 'November 1, 2026',
+  boxOfficeWeekend: 'Oct. 30-Nov. 1'
 };
 
 var MOVIES = [
   {
+    id: 'godzilla-minus-zero',
+    title: 'Godzilla Minus Zero',
+    status: 'Opens Fri., Nov. 6',
+    poster: 'https://image.tmdb.org/t/p/w500/hSmIJluOJmTWvJs4d7kHRxjc8s8.jpg',
+    tmdbId: 1381071,
+    director: 'Takashi Yamazaki',
+    cast: ['Ryunosuke Kamiki', 'Minami Hamabe', 'Yuki Yamada', 'Min Tanaka', 'Hidetaka Yoshioka', 'Masami Nagasawa'],
+    studio: 'Toho / GKIDS',
+    mpaa: 'R',
+    runtime: '2h 15m',
+    genres: ['Sci-Fi', 'Action', 'Horror'],
+    color: 'linear-gradient(135deg, #05080d 0%, #1d3b4f 50%, #c0442b 100%)',
+    rating: 4,
+    headline: 'The big guy is back, bigger and meaner, and Yamazaki still remembers to make you care about the people underfoot.',
+    review: [
+      "Minus One came out of nowhere a few years ago and reminded everybody that a Godzilla movie could actually make you feel something. It won an Oscar for its effects on a budget Hollywood would spend on catering. So yeah, I've been waiting on this one, and the good news is Takashi Yamazaki didn't play it safe.",
+      "It picks up in 1949. Japan is still digging itself out of the war and out of the last attack, and people are just starting to believe the worst is behind them. Then something new shows up and starts tearing the country apart, and Godzilla comes back too, regenerated and angrier than ever. Ryunosuke Kamiki and Minami Hamabe are back, and the movie leans on their characters to keep it grounded while the sky falls in.",
+      "The scale here is enormous. The effects blend into the real locations so well that you stop thinking about them, and Yamazaki shoots the monster scenes like a disaster movie that's half a horror movie. Godzilla is scary again. Not cool, not a mascot, scary. And the R rating means it doesn't flinch about what that kind of destruction does to people.",
+      "It's not quite the tight, perfect little machine Minus One was. The human story wanders more, and in the last stretch it leans on a couple of contrivances and gets a bit sillier than you'd want. Whether it's better than the last one is going to start arguments. Bigger, for sure. Better, maybe not.",
+      "If you saw Minus One, you already know you're going. If you didn't, go anyway, and find the biggest screen near you. It's subtitled, so don't let that scare you off."
+    ],
+    bottomLine: "A huge, scary, heartfelt monster movie that only slips a little in the home stretch.",
+    scores: { rt: '92%', metacritic: '78' },
+    boxOffice: 'Opens Nov. 6 (tracking for a $25-35M opening)',
+    archived: false
+  },
+  {
+    id: 'wild-horse-nine',
+    title: 'Wild Horse Nine',
+    status: 'Opens Fri., Nov. 6',
+    poster: 'https://image.tmdb.org/t/p/w500/dNJFRtVg3xLQ7dbNIQ55cmmIniD.jpg',
+    tmdbId: 891621,
+    director: 'Martin McDonagh',
+    cast: ['John Malkovich', 'Sam Rockwell', 'Steve Buscemi', 'Tom Waits', 'Parker Posey', 'Mariana di Girolamo'],
+    studio: 'Searchlight Pictures',
+    mpaa: 'R',
+    runtime: '1h 58m',
+    genres: ['Comedy', 'Crime', 'Drama'],
+    color: 'linear-gradient(135deg, #1a1410 0%, #5c4a32 50%, #d4a35a 100%)',
+    rating: 4,
+    headline: 'Two burned-out CIA men on Easter Island, and John Malkovich is having the time of his life.',
+    review: [
+      "Martin McDonagh doesn't make a lot of movies, so when one shows up I pay attention. In Bruges, Three Billboards, The Banshees of Inisherin. The guy writes dialogue like nobody else, mean and funny and sad all at once. Wild Horse Nine is his first since Banshees, and he's got John Malkovich, Sam Rockwell and Steve Buscemi in the same room. I didn't need to know anything else.",
+      "It's 1973 in Chile, right before the coup. Buscemi plays the CIA bureau chief in Santiago, and he ships two of his officers, Malkovich and Rockwell, out to Easter Island. Those two have worked together a long time and they've got a lot of ugly history between them. Out there among the giant stone heads, the past catches up with them, and so does whatever is being cooked up back on the mainland.",
+      "Malkovich won the big acting prize at Venice for this, and from everything I've seen, it's the best part he's had in years. He's always been great at playing guys who are a little bit off, and McDonagh's writing gives him a ton to chew on. Rockwell is a perfect match for him. They've both done McDonagh before, and you can tell they understand the rhythm of his dialogue.",
+      "This one's darker and rougher than his earlier stuff. It's more violent, the swearing never lets up, and some of the charm of Banshees gets traded for swagger. If you found his other movies a bit too prickly, this one won't change your mind. It's also a spy movie that cares more about talking than spying, so don't go in expecting car chases.",
+      "If you like your comedy black and your actors at full strength, go see it. It's the kind of grown-up movie that's getting harder to find in theaters."
+    ],
+    bottomLine: "Sharp, nasty and sad in the way only McDonagh does it, with Malkovich at his best.",
+    scores: { rt: '93%', metacritic: '76' },
+    boxOffice: 'Opens Nov. 6',
+    archived: false
+  },
+  {
+    id: 'ramayana-rise-of-a-legend',
+    title: 'Ramayana: Rise of a Legend',
+    status: 'Opens Thu., Nov. 5',
+    poster: 'https://image.tmdb.org/t/p/w500/cK6xaYrb498y2rmMRSZmRKaCXKL.jpg',
+    tmdbId: 656908,
+    director: 'Nitesh Tiwari',
+    cast: ['Ranbir Kapoor', 'Yash', 'Sai Pallavi', 'Sunny Deol', 'Ravi Dubey', 'Arun Govil'],
+    studio: 'Prime Focus Studios / Sony Pictures',
+    mpaa: 'PG-13',
+    runtime: '3h 15m',
+    genres: ['Epic', 'Fantasy', 'Action'],
+    color: 'linear-gradient(135deg, #1f0d05 0%, #7a3b0c 50%, #e8b04a 100%)',
+    rating: 3,
+    headline: 'It looks like a million bucks. It just forgets to give anyone a heartbeat.',
+    review: [
+      "This is being billed as the biggest worldwide release Indian cinema has ever had, and it's the first half of a two-part take on one of the oldest stories people tell. That's a lot of weight to carry. Ranbir Kapoor plays Rama, Yash plays Ravana, and the budget is up there with the big Hollywood epics.",
+      "Part one covers the opening of the story. Rama trains under a sage, wins Sita's hand by stringing a divine bow nobody else can, and then, right as he's about to be crowned, gets forced into fourteen years of exile by his stepmother. He heads into the forest with Sita and his brother Lakshmana, and Ravana is waiting in the wings.",
+      "On looks alone, this thing is a knockout. The sets, the costumes and the sheer size of it are something you rarely get from any industry, and if you grew up with this story, seeing it built on this scale is going to mean something to you. Sai Pallavi's Sita and Yash's Ravana are the ones people seem to be talking about.",
+      "The problem is everything under the spectacle. The characters stay pretty flat, the script lurches from one big set piece to the next, and for a story this full of love and duty and loss, it can feel weirdly hollow. Some of the effects don't hold up either. And it is long. Over three hours for half a story is a real ask, so check your showtime before you go.",
+      "If this story is part of your life or you just want a big-screen feast for the eyes, it's worth a look. If you need the people to feel as big as the palaces, you might want to wait for part two and see if it gets there."
+    ],
+    bottomLine: "Gorgeous and huge, but long and strangely cold for a story this full of feeling.",
+    scores: { metacritic: '56' },
+    boxOffice: 'Opens Nov. 5 worldwide',
+    archived: false
+  },
+  {
+    id: 'the-only-living-pickpocket-in-new-york',
+    title: 'The Only Living Pickpocket in New York',
+    status: '#9 at the box office',
+    poster: 'https://image.tmdb.org/t/p/w500/pNdB9va2AEPQe9UfhKAdIt8nus9.jpg',
+    tmdbId: 1458099,
+    director: 'Noah Segan',
+    cast: ['John Turturro', 'Giancarlo Esposito', 'Tatiana Maslany', 'Steve Buscemi', 'Jamie Lee Curtis', 'Will Price'],
+    studio: 'Sony Pictures Classics',
+    mpaa: 'R',
+    runtime: '1h 28m',
+    genres: ['Crime', 'Drama', 'Thriller'],
+    color: 'linear-gradient(135deg, #14110f 0%, #4a3b2c 55%, #b07a3c 100%)',
+    rating: 4.5,
+    headline: "John Turturro as the last of a dying breed. It's small, it's lean, and it's one of the best things in theaters.",
+    review: [
+      "Everybody knows John Turturro, but how often does he actually get to carry a movie? Not often enough. That's what had me curious about this one, and it turns out it's exactly the kind of part he's been due for. It played Sundance back in January and it's finally out everywhere.",
+      "Turturro plays Harry, an old-school pickpocket in the Bronx whose whole trade is drying up, because nobody carries cash anymore. He's also trying to look after his wife, who's disabled, and the money's running thin. Then he lifts a bag off the wrong young guy. What's inside is worth a lot to some very bad people, and they want it back.",
+      "It's a character study first and a crime movie second, which is exactly the right order. Turturro is quiet and proud and a little heartbreaking, and the movie gives him all the room he needs. Noah Segan, who you've probably seen acting in the Knives Out movies, directs it with a real feel for the outer boroughs. It feels like actual New York, not the postcard version, and the plot is tight as a drum at under an hour and a half. Giancarlo Esposito, Steve Buscemi and Jamie Lee Curtis are all in it too, which doesn't hurt.",
+      "If there's a knock, it's that this is a modest movie on purpose. It's a slow autumn kind of film, not a twisty heist thriller, and if you go in expecting fireworks you're going to be checking your watch. I'd call that a choice, not a flaw.",
+      "If you miss grown-up crime movies about people instead of explosions, go see it while it's still on a big screen. It just went wide, and movies like this need the help."
+    ],
+    bottomLine: "A quiet, perfectly built little crime movie with Turturro doing some of the best work of his career.",
+    scores: { rt: '97%', metacritic: '82', audience: '86%' },
+    boxOffice: '$2.1M total after 2 weeks (expanded nationwide Oct. 30)',
+    archived: false
+  },
+  {
     id: 'wildwood',
     title: 'Wildwood',
-    status: 'Opens Fri., Oct. 23',
+    status: '#3 at the box office',
     poster: 'https://image.tmdb.org/t/p/w500/snFM00mpNAfUzUtkdEW0uDEvXA0.jpg',
     tmdbId: 791523,
     director: 'Travis Knight',
@@ -31,14 +139,14 @@ var MOVIES = [
       "For older kids, teens and any adult who loves animation, this is the one to see on the biggest screen you can find. Movies made like this don't come along very often."
     ],
     bottomLine: "A handmade fantasy epic that's a little long and absolutely worth it.",
-    scores: { rt: '100%', metacritic: '87', audience: '98%' },
-    boxOffice: 'Opens Oct. 23 (tracking for a $15-21M opening)',
+    scores: { rt: '99%', metacritic: '88', cinemascore: 'A', audience: '97%' },
+    boxOffice: '$25.9M total after 2 weeks',
     archived: false
   },
   {
     id: 'wicker',
     title: 'Wicker',
-    status: 'Opens Fri., Oct. 23',
+    status: '#4 at the box office',
     poster: 'https://image.tmdb.org/t/p/w500/6FcBZOKvyrLCKGCyBG0ySCR4okt.jpg',
     tmdbId: 1195803,
     director: 'Alex Huston Fischer and Eleanor Wilson',
@@ -58,14 +166,14 @@ var MOVIES = [
       "If you like your love stories weird and warm, and you'll watch Colman in anything, go. This is the kind of original movie that only survives if people show up for it."
     ],
     bottomLine: "A sweet, funny, genuinely odd fairy tale for grown-ups, carried by Olivia Colman.",
-    scores: { rt: '92%', metacritic: '71', audience: '94%' },
-    boxOffice: 'Opens Oct. 23 (tracking for a $6-8M opening)',
+    scores: { rt: '94%', metacritic: '70', audience: '92%' },
+    boxOffice: '$13.3M total after 2 weeks',
     archived: false
   },
   {
     id: 'clayface',
     title: 'Clayface',
-    status: 'Opens Fri., Oct. 23',
+    status: '#2 at the box office',
     poster: 'https://image.tmdb.org/t/p/w500/9l1NuFjel2j89hiuiJbsxfblqjy.jpg',
     tmdbId: 1400940,
     director: 'James Watkins',
@@ -85,14 +193,14 @@ var MOVIES = [
       "Horror fans and anyone tired of the same old superhero formula should check it out. Audiences are liking it a lot more than critics are, which usually means it's a fun night out. If you just want capes and punching, this isn't that."
     ],
     bottomLine: "A messy but bold DC horror movie with a strong lead and gloriously gross effects.",
-    scores: { rt: '76%', metacritic: '59', audience: '94%' },
-    boxOffice: 'Opens Oct. 23 (tracking for a $25-35M opening)',
+    scores: { rt: '77%', metacritic: '59', cinemascore: 'A-', audience: '94%' },
+    boxOffice: '$44.1M total after 2 weeks',
     archived: false
   },
   {
     id: 'a-talent-for-murder',
     title: 'A Talent for Murder',
-    status: 'Opens Fri., Oct. 23',
+    status: '#25 at the box office',
     poster: 'https://image.tmdb.org/t/p/w500/mstDPKNKgSGFvVFVdfzeMNkcyw2.jpg',
     tmdbId: 1084409,
     director: 'Anton Corbijn',
@@ -113,13 +221,13 @@ var MOVIES = [
     ],
     bottomLine: "A chilly two-hander with Helen Mirren having a wicked good time at its center.",
     scores: { rt: '77%', metacritic: '67' },
-    boxOffice: 'Opens Oct. 23',
-    archived: false
+    boxOffice: '$1.1M total after 2 weeks',
+    archived: true
   },
   {
     id: 'klara-and-the-sun',
     title: 'Klara and the Sun',
-    status: 'Opens Fri., Oct. 23',
+    status: '#16 at the box office',
     poster: 'https://image.tmdb.org/t/p/w500/xqovj2p6HRsgHxN81qYAYF4StgM.jpg',
     tmdbId: 858035,
     director: 'Taika Waititi',
@@ -140,13 +248,13 @@ var MOVIES = [
     ],
     bottomLine: "A great cast can't save an adaptation that jokes its way right past the heart of the story.",
     scores: { rt: '23%', metacritic: '30' },
-    boxOffice: 'Opens Oct. 23 in about 850 theaters (tracking around $2M)',
-    archived: false
+    boxOffice: '$701K opening weekend',
+    archived: true
   },
   {
     id: 'street-fighter',
     title: 'Street Fighter',
-    status: '#1 at the box office',
+    status: '#5 at the box office',
     poster: 'https://image.tmdb.org/t/p/w500/pwUb3gdkSrlyMZWs0MFOQg3N5s7.jpg',
     tmdbId: 1153576,
     director: 'Kitao Sakurai',
@@ -166,14 +274,14 @@ var MOVIES = [
       "If you love the games, there's enough here for a matinee, and kids seem to be eating it up. If you're not already a fan, nothing in it is going to make you one."
     ],
     bottomLine: "Great fights stuck in a movie that doesn't know what to do between rounds.",
-    scores: { rt: '40%', metacritic: '44', cinemascore: 'B-', audience: '79%' },
-    boxOffice: '$30.8M opening weekend',
+    scores: { rt: '41%', metacritic: '43', cinemascore: 'B-', audience: '78%' },
+    boxOffice: '$53.0M total after 3 weeks',
     archived: false
   },
   {
     id: 'you-can-see-everything',
     title: 'You Can See Everything',
-    status: '#2 at the box office',
+    status: '#1 at the box office',
     poster: 'https://image.tmdb.org/t/p/w500/Ap8QwmKfSjYbWC4XIP8w9pdn72O.jpg',
     tmdbId: 1765072,
     director: 'Nathan Fielder and Lance Oppenheim',
@@ -193,14 +301,14 @@ var MOVIES = [
       "Go anyway. This is one of the most talked-about movies of the year for good reason, and it's the kind you'll want to argue about on the drive home. Just eat first."
     ],
     bottomLine: 'A weird, gripping portrait that leaves you arguing with yourself about who you just spent three hours with.',
-    scores: { rt: '98%', metacritic: '97', audience: '98%' },
-    boxOffice: '$15.6M opening weekend',
+    scores: { rt: '96%', metacritic: '97', audience: '96%' },
+    boxOffice: '$63.9M total after 3 weeks',
     archived: false
   },
   {
     id: 'whalefall',
     title: 'Whalefall',
-    status: '#4 at the box office',
+    status: '#13 at the box office',
     poster: 'https://image.tmdb.org/t/p/w500/vjTYUTgh9nO88i6HZ4YPRhiFL05.jpg',
     tmdbId: 1255833,
     director: 'Brian Duffield',
@@ -220,14 +328,14 @@ var MOVIES = [
       "If you like your thrillers high-concept and a little nuts, it's worth a look. Just know going in that it's better at the whale than at the feelings."
     ],
     bottomLine: "A gutsy, goofy survival ride that's at its best when it stays inside the whale.",
-    scores: { rt: '72%', metacritic: '59', cinemascore: 'B', audience: '82%' },
-    boxOffice: '$7.8M opening weekend',
+    scores: { rt: '74%', metacritic: '59', cinemascore: 'B', audience: '81%' },
+    boxOffice: '$16.4M total after 3 weeks',
     archived: false
   },
   {
     id: 'sense-and-sensibility',
     title: 'Sense and Sensibility',
-    status: '#5 at the box office',
+    status: '#11 at the box office',
     poster: 'https://image.tmdb.org/t/p/w500/czsyPHosFNbh4PPqXfqWu1aBXnA.jpg',
     tmdbId: 1503762,
     director: 'Georgia Oakley',
@@ -247,14 +355,14 @@ var MOVIES = [
       "Austen fans and anyone who loves a good period piece should go, and it'd make a great outing with your mom or your sister. If corsets and longing looks aren't your thing, nothing here is going to convert you."
     ],
     bottomLine: "A handsome, heartfelt take that's more about sisters than suitors, and better for it.",
-    scores: { rt: '77%', metacritic: '71', cinemascore: 'A-', audience: '88%' },
-    boxOffice: '$7.2M opening weekend',
+    scores: { rt: '77%', metacritic: '71', cinemascore: 'A-', audience: '89%' },
+    boxOffice: '$16.8M total after 3 weeks',
     archived: false
   },
   {
     id: 'jailer-2',
     title: 'Jailer 2',
-    status: '#9 at the box office',
+    status: '#13 at the box office',
     poster: 'https://image.tmdb.org/t/p/w500/upwdEyhhYZ7pT2hD535fr2MGfpx.jpg',
     tmdbId: 1234139,
     director: 'Nelson Dilipkumar',
@@ -275,13 +383,13 @@ var MOVIES = [
     ],
     bottomLine: "A crowd-pleasing star vehicle that's a blast in bursts and a slog in between.",
     scores: { rt: '85%', audience: '93%' },
-    boxOffice: '$3.3M opening weekend',
-    archived: false
+    boxOffice: '$7.2M total after 2 weeks',
+    archived: true
   },
   {
     id: 'other-mommy',
     title: 'Other Mommy',
-    status: '#3 at the box office',
+    status: '#8 at the box office',
     poster: 'https://image.tmdb.org/t/p/w500/fGRNCssTRrhYZxNzykGGCoMsAVq.jpg',
     tmdbId: 1400837,
     director: 'Rob Savage',
@@ -301,8 +409,8 @@ var MOVIES = [
       "It made a pile of money because the hook is that good. If you're a horror completist, you'll find a couple of scenes to like. Everybody else can wait for streaming, or just call their own mom."
     ],
     bottomLine: "A killer premise and a fearless lead, buried under a movie that can't keep a straight face.",
-    scores: { rt: '18%', metacritic: '39', cinemascore: 'D+', audience: '48%' },
-    boxOffice: '$44.7M total after 2 weeks',
+    scores: { rt: '19%', metacritic: '38', cinemascore: 'D+', audience: '48%' },
+    boxOffice: '$55.6M total after 4 weeks',
     archived: false
   },
   {
@@ -362,7 +470,7 @@ var MOVIES = [
   {
     id: 'verity',
     title: 'Verity',
-    status: '#6 at the box office',
+    status: '#12 at the box office',
     poster: 'https://image.tmdb.org/t/p/w500/Lr0Ng7Gg02RW1AyfYEL6P0WUvd.jpg',
     tmdbId: 1283515,
     director: 'Michael Showalter',
@@ -382,8 +490,8 @@ var MOVIES = [
       "It's not a masterpiece, and it's certainly not Gone Girl, but it's a blast of a ride. If you love pulpy mysteries and powerhouse performances, this is your kind of movie."
     ],
     bottomLine: "Vapid at times, but addictive throughout. A perfect 'guilty pleasure' watch.",
-    scores: { rt: '31%', metacritic: '44', cinemascore: 'C+', audience: '71%' },
-    boxOffice: '$65.9M total after 3 weeks',
+    scores: { rt: '31%', metacritic: '44', cinemascore: 'C+', audience: '72%' },
+    boxOffice: '$74.2M total after 5 weeks',
     archived: false
   },
   {
@@ -437,7 +545,7 @@ var MOVIES = [
     ],
     bottomLine: "Fast, gross and a total blast. Grab some friends and see it loud.",
     scores: { rt: '96%', metacritic: '79', cinemascore: 'B+', audience: '90%' },
-    boxOffice: '$148.5M total after 5 weeks',
+    boxOffice: '$157.4M total after 7 weeks',
     archived: false
   },
   {
@@ -470,7 +578,7 @@ var MOVIES = [
   {
     id: 'forgotten-island',
     title: 'Forgotten Island',
-    status: '#10 at the box office',
+    status: '#20 at the box office',
     poster: 'https://image.tmdb.org/t/p/w500/dGSsPovyUW5XVekXcy7F2GyhTEh.jpg',
     tmdbId: 1465063,
     director: 'Joel Crawford, Januel Mercado',
@@ -491,13 +599,13 @@ var MOVIES = [
     ],
     bottomLine: "Imaginative, heartfelt and visually gorgeous. A must-watch for families and animation fans.",
     scores: { rt: '94%', metacritic: '74', cinemascore: 'A', audience: '95%' },
-    boxOffice: '$35.2M total after 4 weeks',
-    archived: false
+    boxOffice: '$37.3M total after 6 weeks',
+    archived: true
   },
   {
     id: 'heart-of-the-beast',
     title: 'Heart of the Beast',
-    status: '#8 at the box office',
+    status: '#10 at the box office',
     poster: 'https://image.tmdb.org/t/p/w500/1ApfSA8JTqeha3GTFEY8syV4auq.jpg',
     tmdbId: 1263337,
     director: 'David Ayer',
@@ -516,8 +624,8 @@ var MOVIES = [
       "Critics and audiences are both on its side, and I get why. It's not a perfect movie. It's an honest one about loyalty, and that's enough to carry it."
     ],
     bottomLine: "A little far-fetched, a lot heartfelt. Dog people, this is your weekend.",
-    scores: { rt: '85%', metacritic: '66', cinemascore: 'A-', audience: '94%' },
-    boxOffice: '$58.2M total after 4 weeks',
+    scores: { rt: '84%', metacritic: '66', cinemascore: 'A-', audience: '95%' },
+    boxOffice: '$65.1M total after 6 weeks',
     archived: false
   },
   {
