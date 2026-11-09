@@ -3,15 +3,96 @@
 // Posters come from the TMDB image CDN (image.tmdb.org). TMDB's terms ask for attribution somewhere on the site.
 
 var SITE = {
-  updated: 'November 1, 2026',
-  boxOfficeWeekend: 'Oct. 30-Nov. 1'
+  updated: 'November 8, 2026',
+  boxOfficeWeekend: 'Nov. 6-8'
 };
 
 var MOVIES = [
   {
+    id: 'the-cat-in-the-hat',
+    title: 'The Cat in the Hat',
+    status: '#2 at the box office',
+    poster: 'https://image.tmdb.org/t/p/w500/mWN6knIVJ2o7eGwSm7mOgSCwNUc.jpg',
+    tmdbId: 1117898,
+    director: 'Erica Rivinoja and Alessandro Carloni',
+    cast: ['Bill Hader', 'Xochitl Gomez', 'Matt Berry', 'Quinta Brunson', 'Giancarlo Esposito', 'America Ferrera'],
+    studio: 'Warner Bros. Pictures Animation',
+    mpaa: 'PG',
+    runtime: '1h 47m',
+    genres: ['Animation', 'Family', 'Comedy'],
+    color: 'linear-gradient(135deg, #0d1b3d 0%, #c8102e 55%, #f4f1e8 100%)',
+    rating: 3,
+    headline: "Bill Hader makes a great Cat. The movie around him just can't sit still long enough to let him land a joke.",
+    review: [
+      "Let's be honest, the bar here was on the floor. The last time Hollywood put this cat on a big screen it was a live-action fever dream that a lot of us are still trying to forget. So an animated version from Warner's new animation shop, with Bill Hader doing the voice, already sounded like an upgrade before anybody saw a frame.",
+      "This one reinvents the Cat as an agent for a kind of magical organization that drops in on kids who need a little chaos in their lives. His latest assignment is a brother and sister who are having a rough time after their family moves. One of his gadgets goes haywire, and the three of them get flung through a string of strange little pocket worlds while the Cat tries to fix the mess he made.",
+      "Hader is the right call. He's got that fast, slightly unhinged energy the character needs, and the supporting voice cast is stacked, with Matt Berry and Quinta Brunson as the kind of names that make grown-ups perk up. The animation is bright and bouncy, and when it slows down and actually lets the kids be sad about the move, there's something sweet in there.",
+      "The problem is it almost never slows down. It's crammed with stuff, world after world, gag after gag, and somewhere along the way the stakes balloon into something way bigger than a Dr. Seuss story needs. Seuss was about a rainy afternoon and a mess on the floor. This feels like it wants to be a franchise launch, and you can feel the strain.",
+      "Kids are going to have a great time. Families are giving it top marks, and honestly, that's who it's for. If you're a parent, you'll get a few laughs and a decent nap's worth of color and noise. If you're an adult going alone, I'm not sure why you're here."
+    ],
+    bottomLine: "A fun, frantic family outing that's better than you feared, just way busier than it needs to be.",
+    scores: { rt: '47%', metacritic: '46', cinemascore: 'A', audience: '88%' },
+    boxOffice: '$20.5M opening weekend',
+    archived: false
+  },
+  {
+    id: 'drummer-boy',
+    title: 'Drummer Boy',
+    status: '#3 at the box office',
+    poster: 'https://image.tmdb.org/t/p/w500/bhjdgMm2fFrysSzVqv5RwRwIbVf.jpg',
+    tmdbId: 1697911,
+    director: 'Ben Smallbone and Joel David Smallbone',
+    cast: ['Lucas Leach', 'India Brown', 'Joel David Smallbone', 'Melora Hardin', 'Ioan Gruffudd', 'Iain Glen'],
+    studio: 'Angel Studios',
+    mpaa: 'PG-13',
+    runtime: '2h 9m',
+    genres: ['Musical', 'History', 'Drama', 'War'],
+    color: 'linear-gradient(135deg, #10151f 0%, #2c3e66 50%, #8b2a1f 100%)',
+    rating: 3,
+    headline: "A Revolutionary War musical with its heart on its sleeve and a few songs that should have been cut.",
+    review: [
+      "I'll give it this, nobody else is making a movie like Drummer Boy. It's a Revolutionary War musical, from the Smallbone brothers of For King & Country, with original songs by the band. That's either exactly your thing or the furthest thing from it, and I suspect you already know which.",
+      "The story follows two brothers who end up on opposite sides of the war. One marches with the Americans. The other goes over to the British after he falls for an enslaved woman, and the movie uses that split to dig into loyalty, faith and what it takes to forgive family. Lucas Leach and India Brown lead it, and there's some real British character-actor muscle behind them in Ioan Gruffudd and Iain Glen.",
+      "It's sincere all the way down, and that sincerity is the best thing about it. When the brothers' story is working, it hits pretty hard, and the movie isn't afraid of how ugly the war gets, which is where that PG-13 comes from. It also looks a lot more expensive than its budget, which says something about who made it.",
+      "But it's long, it's sentimental, and the musical numbers don't always feel like they belong. A few of them land like the movie hit pause so the band could play a set. Some of the story turns are odd, too, and a little more trimming would have helped everything.",
+      "Critics are split, while faith audiences are really showing up for it and loving it. If you like your history earnest and your movies with a message, go. If you're allergic to sentimental, you'll be checking the time."
+    ],
+    bottomLine: "Big-hearted and ambitious, but sappier and longer than it needs to be.",
+    scores: { rt: '50%', cinemascore: 'A', audience: '93%' },
+    boxOffice: '$9.3M opening weekend',
+    archived: false
+  },
+  {
+    id: 'jimmy',
+    title: 'Jimmy',
+    status: '#10 at the box office',
+    poster: 'https://image.tmdb.org/t/p/w500/xcMiTqj4kvSnUHhSLZ1WUvI9rzH.jpg',
+    tmdbId: 1241478,
+    director: 'Aaron Burns',
+    cast: ['KJ Apa', 'Max Casella', 'Jason Alexander', 'Sarah Drew', 'Neal McDonough', 'Christopher McDonald'],
+    studio: 'Fathom Entertainment',
+    mpaa: 'PG-13',
+    runtime: '2h',
+    genres: ['Drama', 'Biography'],
+    color: 'linear-gradient(135deg, #14110d 0%, #4a3b28 50%, #c9a66b 100%)',
+    rating: 3,
+    headline: "KJ Apa gets Jimmy Stewart's voice down. The movie doesn't quite get the man.",
+    review: [
+      "Jimmy Stewart's life is a better story than a lot of the movies he made. He won an Oscar, then walked away from the top of Hollywood to fly bombers over Europe, then came home changed and made It's a Wonderful Life. That last part alone could carry a movie, so I get why somebody wanted to make this one.",
+      "Jimmy covers that whole stretch, from The Philadelphia Story through the war and back to Frank Capra's set. KJ Apa plays Stewart, Max Casella plays Capra, and the supporting cast has some fun faces in it, Jason Alexander and Neal McDonough among them.",
+      "The big surprise is Apa. You hear the name and think there's no way, and then he nails the drawl and the hesitations without tipping into an impression. The war section is the strongest part of the movie by a mile. That's where it seems most interested in what actually happened to him up there and what it cost him.",
+      "Outside of that, it plays it very safe. It's a respectful, by-the-numbers biopic that hits every beat you'd expect and lays the sentiment on thick. For a movie about a guy who came back from the war carrying a lot of darkness, it's weirdly reluctant to sit in that darkness. You come out knowing what he did, but not really who he was.",
+      "Critics are lukewarm, and audiences are eating it up. If you love classic Hollywood or you've watched It's a Wonderful Life every Christmas of your life, it's an easy, warm two hours. Everyone else can wait for it to stream."
+    ],
+    bottomLine: "A good lead performance in a safe, sentimental biopic that only really comes alive in the war scenes.",
+    scores: { rt: '63%', metacritic: '45', audience: '96%' },
+    boxOffice: '$2.2M opening weekend',
+    archived: false
+  },
+  {
     id: 'godzilla-minus-zero',
     title: 'Godzilla Minus Zero',
-    status: 'Opens Fri., Nov. 6',
+    status: '#1 at the box office',
     poster: 'https://image.tmdb.org/t/p/w500/hSmIJluOJmTWvJs4d7kHRxjc8s8.jpg',
     tmdbId: 1381071,
     director: 'Takashi Yamazaki',
@@ -31,14 +112,14 @@ var MOVIES = [
       "If you saw Minus One, you already know you're going. If you didn't, go anyway, and find the biggest screen near you. It's subtitled, so don't let that scare you off."
     ],
     bottomLine: "A huge, scary, heartfelt monster movie that only slips a little in the home stretch.",
-    scores: { rt: '92%', metacritic: '78' },
-    boxOffice: 'Opens Nov. 6 (tracking for a $25-35M opening)',
+    scores: { rt: '90%', metacritic: '74', cinemascore: 'A', audience: '96%' },
+    boxOffice: '$31.6M opening weekend',
     archived: false
   },
   {
     id: 'wild-horse-nine',
     title: 'Wild Horse Nine',
-    status: 'Opens Fri., Nov. 6',
+    status: '#8 at the box office',
     poster: 'https://image.tmdb.org/t/p/w500/dNJFRtVg3xLQ7dbNIQ55cmmIniD.jpg',
     tmdbId: 891621,
     director: 'Martin McDonagh',
@@ -58,14 +139,14 @@ var MOVIES = [
       "If you like your comedy black and your actors at full strength, go see it. It's the kind of grown-up movie that's getting harder to find in theaters."
     ],
     bottomLine: "Sharp, nasty and sad in the way only McDonagh does it, with Malkovich at his best.",
-    scores: { rt: '93%', metacritic: '76' },
-    boxOffice: 'Opens Nov. 6',
+    scores: { rt: '94%', metacritic: '78', audience: '91%' },
+    boxOffice: '$6.0M opening weekend (1,100 theaters)',
     archived: false
   },
   {
     id: 'ramayana-rise-of-a-legend',
     title: 'Ramayana: Rise of a Legend',
-    status: 'Opens Thu., Nov. 5',
+    status: '#5 at the box office',
     poster: 'https://image.tmdb.org/t/p/w500/cK6xaYrb498y2rmMRSZmRKaCXKL.jpg',
     tmdbId: 656908,
     director: 'Nitesh Tiwari',
@@ -85,14 +166,14 @@ var MOVIES = [
       "If this story is part of your life or you just want a big-screen feast for the eyes, it's worth a look. If you need the people to feel as big as the palaces, you might want to wait for part two and see if it gets there."
     ],
     bottomLine: "Gorgeous and huge, but long and strangely cold for a story this full of feeling.",
-    scores: { metacritic: '56' },
-    boxOffice: 'Opens Nov. 5 worldwide',
+    scores: { rt: '76%', metacritic: '58', audience: '93%' },
+    boxOffice: '$8.7M opening weekend',
     archived: false
   },
   {
     id: 'the-only-living-pickpocket-in-new-york',
     title: 'The Only Living Pickpocket in New York',
-    status: '#9 at the box office',
+    status: '#17 at the box office',
     poster: 'https://image.tmdb.org/t/p/w500/pNdB9va2AEPQe9UfhKAdIt8nus9.jpg',
     tmdbId: 1458099,
     director: 'Noah Segan',
@@ -113,13 +194,13 @@ var MOVIES = [
     ],
     bottomLine: "A quiet, perfectly built little crime movie with Turturro doing some of the best work of his career.",
     scores: { rt: '97%', metacritic: '82', audience: '86%' },
-    boxOffice: '$2.1M total after 2 weeks (expanded nationwide Oct. 30)',
-    archived: false
+    boxOffice: '$3.9M total after 4 weeks',
+    archived: true
   },
   {
     id: 'wildwood',
     title: 'Wildwood',
-    status: '#3 at the box office',
+    status: '#7 at the box office',
     poster: 'https://image.tmdb.org/t/p/w500/snFM00mpNAfUzUtkdEW0uDEvXA0.jpg',
     tmdbId: 791523,
     director: 'Travis Knight',
@@ -140,13 +221,13 @@ var MOVIES = [
     ],
     bottomLine: "A handmade fantasy epic that's a little long and absolutely worth it.",
     scores: { rt: '99%', metacritic: '88', cinemascore: 'A', audience: '97%' },
-    boxOffice: '$25.9M total after 2 weeks',
+    boxOffice: '$39.4M total after 3 weeks',
     archived: false
   },
   {
     id: 'wicker',
     title: 'Wicker',
-    status: '#4 at the box office',
+    status: '#9 at the box office',
     poster: 'https://image.tmdb.org/t/p/w500/6FcBZOKvyrLCKGCyBG0ySCR4okt.jpg',
     tmdbId: 1195803,
     director: 'Alex Huston Fischer and Eleanor Wilson',
@@ -167,13 +248,13 @@ var MOVIES = [
     ],
     bottomLine: "A sweet, funny, genuinely odd fairy tale for grown-ups, carried by Olivia Colman.",
     scores: { rt: '94%', metacritic: '70', audience: '92%' },
-    boxOffice: '$13.3M total after 2 weeks',
+    boxOffice: '$19.9M total after 3 weeks',
     archived: false
   },
   {
     id: 'clayface',
     title: 'Clayface',
-    status: '#2 at the box office',
+    status: '#6 at the box office',
     poster: 'https://image.tmdb.org/t/p/w500/9l1NuFjel2j89hiuiJbsxfblqjy.jpg',
     tmdbId: 1400940,
     director: 'James Watkins',
@@ -194,7 +275,7 @@ var MOVIES = [
     ],
     bottomLine: "A messy but bold DC horror movie with a strong lead and gloriously gross effects.",
     scores: { rt: '77%', metacritic: '59', cinemascore: 'A-', audience: '94%' },
-    boxOffice: '$44.1M total after 2 weeks',
+    boxOffice: '$56.6M total after 3 weeks',
     archived: false
   },
   {
@@ -254,7 +335,7 @@ var MOVIES = [
   {
     id: 'street-fighter',
     title: 'Street Fighter',
-    status: '#5 at the box office',
+    status: '#11 at the box office',
     poster: 'https://image.tmdb.org/t/p/w500/pwUb3gdkSrlyMZWs0MFOQg3N5s7.jpg',
     tmdbId: 1153576,
     director: 'Kitao Sakurai',
@@ -275,13 +356,13 @@ var MOVIES = [
     ],
     bottomLine: "Great fights stuck in a movie that doesn't know what to do between rounds.",
     scores: { rt: '41%', metacritic: '43', cinemascore: 'B-', audience: '78%' },
-    boxOffice: '$53.0M total after 3 weeks',
+    boxOffice: '$57.4M total after 4 weeks',
     archived: false
   },
   {
     id: 'you-can-see-everything',
     title: 'You Can See Everything',
-    status: '#1 at the box office',
+    status: '#4 at the box office',
     poster: 'https://image.tmdb.org/t/p/w500/Ap8QwmKfSjYbWC4XIP8w9pdn72O.jpg',
     tmdbId: 1765072,
     director: 'Nathan Fielder and Lance Oppenheim',
@@ -302,13 +383,13 @@ var MOVIES = [
     ],
     bottomLine: 'A weird, gripping portrait that leaves you arguing with yourself about who you just spent three hours with.',
     scores: { rt: '96%', metacritic: '97', audience: '96%' },
-    boxOffice: '$63.9M total after 3 weeks',
+    boxOffice: '$79.8M total after 4 weeks',
     archived: false
   },
   {
     id: 'whalefall',
     title: 'Whalefall',
-    status: '#13 at the box office',
+    status: '#23 at the box office',
     poster: 'https://image.tmdb.org/t/p/w500/vjTYUTgh9nO88i6HZ4YPRhiFL05.jpg',
     tmdbId: 1255833,
     director: 'Brian Duffield',
@@ -329,13 +410,13 @@ var MOVIES = [
     ],
     bottomLine: "A gutsy, goofy survival ride that's at its best when it stays inside the whale.",
     scores: { rt: '74%', metacritic: '59', cinemascore: 'B', audience: '81%' },
-    boxOffice: '$16.4M total after 3 weeks',
-    archived: false
+    boxOffice: '$17.4M total after 4 weeks',
+    archived: true
   },
   {
     id: 'sense-and-sensibility',
     title: 'Sense and Sensibility',
-    status: '#11 at the box office',
+    status: '#19 at the box office',
     poster: 'https://image.tmdb.org/t/p/w500/czsyPHosFNbh4PPqXfqWu1aBXnA.jpg',
     tmdbId: 1503762,
     director: 'Georgia Oakley',
@@ -356,8 +437,8 @@ var MOVIES = [
     ],
     bottomLine: "A handsome, heartfelt take that's more about sisters than suitors, and better for it.",
     scores: { rt: '77%', metacritic: '71', cinemascore: 'A-', audience: '89%' },
-    boxOffice: '$16.8M total after 3 weeks',
-    archived: false
+    boxOffice: '$18.3M total after 4 weeks',
+    archived: true
   },
   {
     id: 'jailer-2',
@@ -389,7 +470,7 @@ var MOVIES = [
   {
     id: 'other-mommy',
     title: 'Other Mommy',
-    status: '#8 at the box office',
+    status: '#12 at the box office',
     poster: 'https://image.tmdb.org/t/p/w500/fGRNCssTRrhYZxNzykGGCoMsAVq.jpg',
     tmdbId: 1400837,
     director: 'Rob Savage',
@@ -410,7 +491,7 @@ var MOVIES = [
     ],
     bottomLine: "A killer premise and a fearless lead, buried under a movie that can't keep a straight face.",
     scores: { rt: '19%', metacritic: '38', cinemascore: 'D+', audience: '48%' },
-    boxOffice: '$55.6M total after 4 weeks',
+    boxOffice: '$58.3M total after 5 weeks',
     archived: false
   },
   {
@@ -470,7 +551,7 @@ var MOVIES = [
   {
     id: 'verity',
     title: 'Verity',
-    status: '#12 at the box office',
+    status: '#18 at the box office',
     poster: 'https://image.tmdb.org/t/p/w500/Lr0Ng7Gg02RW1AyfYEL6P0WUvd.jpg',
     tmdbId: 1283515,
     director: 'Michael Showalter',
@@ -491,8 +572,8 @@ var MOVIES = [
     ],
     bottomLine: "Vapid at times, but addictive throughout. A perfect 'guilty pleasure' watch.",
     scores: { rt: '31%', metacritic: '44', cinemascore: 'C+', audience: '72%' },
-    boxOffice: '$74.2M total after 5 weeks',
-    archived: false
+    boxOffice: '$75.7M total after 6 weeks',
+    archived: true
   },
   {
     id: 'digger',
@@ -524,7 +605,7 @@ var MOVIES = [
   {
     id: 'resident-evil',
     title: 'Resident Evil',
-    status: '#7 at the box office',
+    status: '#14 at the box office',
     poster: 'https://image.tmdb.org/t/p/w500/i7UyjfPio0VFHB9rBUZSFyhOoM8.jpg',
     tmdbId: 1423191,
     director: 'Zach Cregger',
@@ -545,13 +626,13 @@ var MOVIES = [
     ],
     bottomLine: "Fast, gross and a total blast. Grab some friends and see it loud.",
     scores: { rt: '96%', metacritic: '79', cinemascore: 'B+', audience: '90%' },
-    boxOffice: '$157.4M total after 7 weeks',
+    boxOffice: '$159.7M total after 8 weeks',
     archived: false
   },
   {
     id: 'primetime',
     title: 'Primetime',
-    status: '#12 at the box office',
+    status: '#30 at the box office',
     poster: 'https://image.tmdb.org/t/p/w500/2cxhvwyEwRlysAmRH4iodkvo0z5.jpg',
     tmdbId: 1375441,
     director: 'Lance Oppenheim',
@@ -572,13 +653,13 @@ var MOVIES = [
     ],
     bottomLine: "Intense, uncomfortable and brilliantly acted. A fascinating look at the dark side of reality TV.",
     scores: { rt: '86%', metacritic: '67', cinemascore: 'B', audience: '77%' },
-    boxOffice: '$45.3M total after 4 weeks',
+    boxOffice: '$47.0M total after 7 weeks',
     archived: true
   },
   {
     id: 'forgotten-island',
     title: 'Forgotten Island',
-    status: '#20 at the box office',
+    status: '#28 at the box office',
     poster: 'https://image.tmdb.org/t/p/w500/dGSsPovyUW5XVekXcy7F2GyhTEh.jpg',
     tmdbId: 1465063,
     director: 'Joel Crawford, Januel Mercado',
@@ -599,13 +680,13 @@ var MOVIES = [
     ],
     bottomLine: "Imaginative, heartfelt and visually gorgeous. A must-watch for families and animation fans.",
     scores: { rt: '94%', metacritic: '74', cinemascore: 'A', audience: '95%' },
-    boxOffice: '$37.3M total after 6 weeks',
+    boxOffice: '$37.8M total after 7 weeks',
     archived: true
   },
   {
     id: 'heart-of-the-beast',
     title: 'Heart of the Beast',
-    status: '#10 at the box office',
+    status: '#15 at the box office',
     poster: 'https://image.tmdb.org/t/p/w500/1ApfSA8JTqeha3GTFEY8syV4auq.jpg',
     tmdbId: 1263337,
     director: 'David Ayer',
@@ -625,7 +706,7 @@ var MOVIES = [
     ],
     bottomLine: "A little far-fetched, a lot heartfelt. Dog people, this is your weekend.",
     scores: { rt: '84%', metacritic: '66', cinemascore: 'A-', audience: '95%' },
-    boxOffice: '$65.1M total after 6 weeks',
+    boxOffice: '$67.2M total after 7 weeks',
     archived: false
   },
   {
