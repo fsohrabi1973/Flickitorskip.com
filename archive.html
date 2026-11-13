@@ -7,46 +7,48 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
   <header class="site-header">
     <div class="brand">
-      <span class="brand-mark">&#127916;</span>
+      <span class="brand-mark" aria-hidden="true">&#127916;</span>
       <div>
         <h1>Archive</h1>
         <p class="tagline">Past reviews from the vault</p>
       </div>
     </div>
-    <nav class="tabs" id="tabs">
-      <a class="tab tab-link" href="index.html">Current Reviews</a>
+    <nav class="tabs" aria-label="Main">
+      <a class="tab tab-link" href="index.html">Reviews</a>
+      <a class="tab active" href="archive.html" aria-current="page">Archive</a>
       <a class="tab tab-link" href="https://gofobo.com/main/local_screenings"
-         target="_blank" rel="noopener">GOFOBO Free Screenings &#8599;</a>
+         target="_blank" rel="noopener">GOFOBO Free Screenings <span aria-hidden="true">&#8599;</span><span class="visually-hidden">(opens in a new tab)</span></a>
     </nav>
   </header>
 
-  <main>
-    <section id="panel-reviews" class="panel active">
-      <div class="legend" aria-label="What the verdicts mean">
-        <p class="legend-title">How to read the verdicts</p>
-        <ul class="legend-list">
-          <li><span class="verdict-pill v-good">Flick it</span> <b>4 stars and up.</b> Drop what you're doing and go. This is one to see in a theater, on the big screen.</li>
-          <li><span class="verdict-pill v-good">Worth it</span> <b>3&frac12; stars.</b> A good movie that's worth the ticket. It has a few flaws, but you'll be glad you went.</li>
-          <li><span class="verdict-pill v-mixed">Maybe</span> <b>2&frac12; to 3 stars.</b> Hit and miss. Go if the genre or the cast is your thing, otherwise wait for streaming.</li>
-          <li><span class="verdict-pill v-bad">Skip it</span> <b>2 stars or less.</b> Save your money and your evening. Not worth a trip to the theater.</li>
-        </ul>
-      </div>
-      <div class="toolbar">
-        <p class="updated" id="updated"></p>
-        <div class="filters" id="filters"></div>
-      </div>
-      <div class="grid" id="grid"></div>
+  <main id="main" tabindex="-1">
+    <section class="legend" aria-labelledby="legend-title">
+      <h2 class="legend-title" id="legend-title">How to read the verdicts</h2>
+      <ul class="legend-list">
+        <li><span class="verdict-pill v-good">Flick it</span> <b>4 stars and up.</b> Drop what you're doing and go. This is one to see in a theater, on the big screen.</li>
+        <li><span class="verdict-pill v-good">Worth it</span> <b>3&frac12; stars.</b> A good movie that's worth the ticket. It has a few flaws, but you'll be glad you went.</li>
+        <li><span class="verdict-pill v-mixed">Maybe</span> <b>2&frac12; to 3 stars.</b> Hit and miss. Go if the genre or the cast is your thing, otherwise wait for streaming.</li>
+        <li><span class="verdict-pill v-bad">Skip it</span> <b>2 stars or less.</b> Save your money and your evening. Not worth a trip to the theater.</li>
+      </ul>
     </section>
+    <div class="toolbar">
+      <p class="updated" id="updated"></p>
+      <div class="filters" id="filters" role="group" aria-label="Filter by genre"></div>
+    </div>
+    <p class="visually-hidden" id="results-status" role="status" aria-live="polite"></p>
+    <ul class="grid" id="grid" aria-label="Archived movie reviews"></ul>
   </main>
 
   <div class="modal" id="modal" hidden>
     <div class="modal-backdrop" data-close></div>
-    <article class="modal-body" role="dialog" aria-modal="true" aria-labelledby="modal-title">
-      <button class="modal-close" data-close aria-label="Close">&times;</button>
+    <div class="modal-body" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <button type="button" class="modal-close" data-close><span aria-hidden="true">&times;</span><span class="visually-hidden">Close review</span></button>
       <div id="modal-content"></div>
-    </article>
+    </div>
   </div>
 
   <script src="reviews.js"></script>

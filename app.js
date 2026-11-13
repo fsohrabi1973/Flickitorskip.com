@@ -1,9 +1,13 @@
 (function () {
   var grid = document.getElementById('grid');
   var filtersEl = document.getElementById('filters');
+  var statusEl = document.getElementById('results-status');
   var modal = document.getElementById('modal');
+  var modalBody = modal.querySelector('.modal-body');
   var modalContent = document.getElementById('modal-content');
+  var pageRegions = document.querySelectorAll('.skip-link, .site-header, main');
   var activeGenre = 'All';
+  var lastFocused = null;
 
   var isArchivePage = window.location.pathname.includes('archive.html');
 
@@ -25,9 +29,12 @@
     });
   }
 
+  // Star glyphs are hidden from screen readers; the visually hidden text says the rating in words.
   function stars(n) {
     var full = Math.floor(n), half = n - full >= 0.5;
-    return '★'.repeat(full) + (half ? '½' : '') + '☆'.repeat(5 - full - (half ? 1 : 0));
+    var glyphs = '★'.repeat(full) + (half ? '½' : '') + '☆'.repeat(5 - full - (half ? 1 : 0));
+    return '<span aria-hidden="true">' + glyphs + '</span>' +
+      '<span class="visually-hidden">Rated ' + n + ' out of 5 stars</span>';
   }
 
   function verdictClass(n) {
@@ -40,48 +47,88 @@
 
   function scoreChips(m) {
     var out = [];
-    if (m.scores.rt) out.push('<span class="score">RT <b>' + esc(m.scores.rt) + '</b></span>');
-    if (m.scores.metacritic) out.push('<span class="score">Metacritic <b>' + esc(m.scores.metacritic) + '</b></span>');
-    if (m.scores.cinemascore) out.push('<span class="score">CinemaScore <b>' + esc(m.scores.cinemascore) + '</b></span>');
-    if (m.scores.audience) out.push('<span class="score">Audience <b>' + esc(m.scores.audience) + '</b></span>');
-    return out.join('');
+    if (m.scores.rt) out.push('<li class="score"><abbr title="Rotten Tomatoes">RT</abbr> <b>' + esc(m.scores.rt) + '</b></li>');
+    if (m.scores.metacritic) out.push('<li class="score">Metacritic <b>' + esc(m.scores.metacritic) + '</b></li>');
+    if (m.scores.cinemascore) out.push('<li class="score">CinemaScore <b>' + esc(m.scores.cinemascore) + '</b></li>');
+    if (m.scores.audience) out.push('<li class="score">Audience <b>' + esc(m.scores.audience) + '</b></li>');
+    return out.length ? '<ul class="scores" aria-label="Scores">' + out.join('') + '</ul>' : '';
+  }
+
+  function pageMovies() {
+    return MOVIES.filter(function (m) { return isArchivePage ? m.archived : !m.archived; });
   }
 
   function renderFilters() {
-    var data = MOVIES.filter(function (m) {
-      return isArchivePage ? m.archived : !m.archived;
-    });
-
     var genres = ['All'];
-    data.forEach(function (m) {
+    pageMovies().forEach(function (m) {
       m.genres.forEach(function (g) { if (genres.indexOf(g) === -1) genres.push(g); });
     });
 
     filtersEl.innerHTML = genres.map(function (g) {
-      return '<button class="filter' + (g === activeGenre ? ' active' : '') + '" data-genre="' + esc(g) + '">' + esc(g) + '</button>';
+      var on = g === activeGenre;
+      return '<button type="button" class="filter' + (on ? ' active' : '') + '" data-genre="' + esc(g) +
+        '" aria-pressed="' + on + '">' + esc(g) + '</button>';
     }).join('');
   }
 
+  // Update the pressed state in place so keyboard focus stays on the button that was activated.
+  function syncFilters() {
+    var buttons = filtersEl.querySelectorAll('.filter');
+    for (var i = 0; i < buttons.length; i++) {
+      var on = buttons[i].getAttribute('data-genre') === activeGenre;
+      buttons[i].classList.toggle('active', on);
+      buttons[i].setAttribute('aria-pressed', String(on));
+    }
+  }
+
   function renderGrid() {
-    var list = MOVIES.filter(function (m) {
-      return (isArchivePage ? m.archived : !m.archived) && (activeGenre === 'All' || m.genres.indexOf(activeGenre) !== -1);
+    var list = pageMovies().filter(function (m) {
+      return activeGenre === 'All' || m.genres.indexOf(activeGenre) !== -1;
     });
     grid.innerHTML = list.map(function (m) {
-      return '<article class="card" data-id="' + esc(m.id) + '">' +
+      return '<li class="card">' +
+        '<article aria-labelledby="card-title-' + esc(m.id) + '">' +
         '<div class="card-poster" style="background:' + m.color + '">' +
           (m.poster ? '<img src="' + esc(m.poster) + '" alt="' + esc(m.title) + ' poster" loading="lazy">' : '') +
           '<span class="rank">' + esc(m.status) + '</span>' +
-          '<span class="verdict-pill ' + verdictClass(m.rating) + '">' + verdictLabel(m.rating) + '</span>' +
+          '<span class="verdict-pill ' + verdictClass(m.rating) + '">' +
+            '<span class="visually-hidden">Verdict: </span>' + verdictLabel(m.rating) + '</span>' +
         '</div>' +
         '<div class="card-body">' +
-          '<h2>' + esc(m.title) + '</h2>' +
+          '<h2 id="card-title-' + esc(m.id) + '">' +
+            '<button type="button" class="card-link" data-id="' + esc(m.id) + '" aria-haspopup="dialog">' +
+              esc(m.title) + '<span class="visually-hidden"> - read the review</span>' +
+            '</button>' +
+          '</h2>' +
           '<p class="meta">' + esc(m.mpaa) + ' · ' + esc(m.runtime) + ' · ' + esc(m.genres.join(', ')) + '</p>' +
-          '<p class="stars" aria-label="' + m.rating + ' out of 5">' + stars(m.rating) + '</p>' +
+          '<p class="stars">' + stars(m.rating) + '</p>' +
           '<p class="headline">' + esc(m.headline) + '</p>' +
-          '<div class="scores">' + scoreChips(m) + '</div>' +
+          scoreChips(m) +
         '</div>' +
-      '</article>';
+        '</article>' +
+      '</li>';
     }).join('');
+    return list.length;
+  }
+
+  function focusableIn(el) {
+    return Array.prototype.filter.call(
+      el.querySelectorAll('a[href], button:not([disabled]), input, select, textarea, [tabindex]:not([tabindex="-1"])'),
+      function (n) { return n.offsetParent !== null; }
+    );
+  }
+
+  // While the dialog is open, hide the page behind it from screen readers and keyboard focus.
+  function setBackgroundInert(on) {
+    for (var i = 0; i < pageRegions.length; i++) {
+      if (on) {
+        pageRegions[i].setAttribute('aria-hidden', 'true');
+        pageRegions[i].inert = true;
+      } else {
+        pageRegions[i].removeAttribute('aria-hidden');
+        pageRegions[i].inert = false;
+      }
+    }
   }
 
   function openReview(id) {
@@ -90,18 +137,20 @@
     modalContent.innerHTML =
       '<div class="review-banner" style="background:' + m.color + '">' +
         (m.poster ? '<img class="review-poster" src="' + esc(m.poster) + '" alt="' + esc(m.title) + ' poster">' : '') +
-        '<div>' +
+        '<div class="review-info">' +
           '<p class="rank-inline">' + esc(m.status) + '</p>' +
-          '<h2 id="modal-title">' + esc(m.title) + '</h2>' +
-          '<p class="meta" style="color:#ddd">' + esc(m.mpaa) + ' · ' + esc(m.runtime) + ' · Directed by ' + esc(m.director) + '</p>' +
+          '<h2 id="modal-title" tabindex="-1">' + esc(m.title) + '</h2>' +
+          '<p class="meta review-meta">' + esc(m.mpaa) + ' · ' + esc(m.runtime) + ' · Directed by ' + esc(m.director) + '</p>' +
           '<p class="stars">' + stars(m.rating) + '</p>' +
+          '<p class="review-verdict"><span class="verdict-pill ' + verdictClass(m.rating) + '">' +
+            '<span class="visually-hidden">Verdict: </span>' + verdictLabel(m.rating) + '</span></p>' +
         '</div>' +
       '</div>' +
       '<div class="review-content">' +
-        '<p class="headline" style="font-size:1.2rem">' + esc(m.headline) + '</p>' +
+        '<p class="headline review-headline">' + esc(m.headline) + '</p>' +
         m.review.map(function (p) { return '<p>' + esc(p) + '</p>'; }).join('') +
-        '<h3>Bottom line</h3><div class="bottom-line">' + esc(m.bottomLine) + '</div>' +
-        '<h3>The scores</h3><div class="scores">' + scoreChips(m) + '</div>' +
+        '<h3>Bottom line</h3><p class="bottom-line">' + esc(m.bottomLine) + '</p>' +
+        '<h3>The scores</h3>' + scoreChips(m) +
         '<h3>The details</h3><dl class="facts">' +
           '<dt>Director</dt><dd>' + esc(m.director) + '</dd>' +
           '<dt>Starring</dt><dd>' + esc(m.cast.join(', ')) + '</dd>' +
@@ -109,34 +158,81 @@
           '<dt>Box office</dt><dd>' + esc(m.boxOffice) + '</dd>' +
         '</dl>' +
       '</div>';
+    lastFocused = document.activeElement;
     modal.hidden = false;
     document.body.style.overflow = 'hidden';
+    setBackgroundInert(true);
+    modal.scrollTop = 0;
+    document.getElementById('modal-title').focus();
   }
 
   function closeReview() {
     modal.hidden = true;
     document.body.style.overflow = '';
+    setBackgroundInert(false);
+    if (lastFocused && document.body.contains(lastFocused)) lastFocused.focus();
+    lastFocused = null;
   }
 
   filtersEl.addEventListener('click', function (e) {
-    var g = e.target.getAttribute('data-genre');
-    if (!g) return;
-    activeGenre = g;
-    renderFilters();
-    renderGrid();
+    var btn = e.target.closest('.filter');
+    if (!btn) return;
+    activeGenre = btn.getAttribute('data-genre');
+    syncFilters();
+    var count = renderGrid();
+    statusEl.textContent = 'Showing ' + count + ' ' + (count === 1 ? 'review' : 'reviews') +
+      (activeGenre === 'All' ? '' : ' in ' + activeGenre) + '.';
   });
 
+  // The whole card is clickable for mouse users; keyboard and screen reader users get the title button.
   grid.addEventListener('click', function (e) {
     var card = e.target.closest('.card');
-    if (card) openReview(card.getAttribute('data-id'));
+    if (!card) return;
+    var btn = card.querySelector('.card-link');
+    openReview(btn.getAttribute('data-id'));
+    lastFocused = btn; // return focus to the card's button when the dialog closes
+  });
+
+  // The focus ring outlines the whole card, so scroll the whole card into view (scroll-padding keeps it clear of the sticky header).
+  // If the card is taller than the space left, align its top under the header so the header never covers it.
+  var header = document.querySelector('.site-header');
+  grid.addEventListener('focusin', function (e) {
+    var card = e.target.closest('.card');
+    if (!card || !card.scrollIntoView) return;
+    var top = getComputedStyle(header).position === 'sticky' ? header.getBoundingClientRect().bottom : 0;
+    var r = card.getBoundingClientRect();
+    if (r.top < top || r.bottom > window.innerHeight) {
+      card.scrollIntoView({ block: r.height > window.innerHeight - top ? 'start' : 'nearest' });
+    }
   });
 
   modal.addEventListener('click', function (e) {
-    if (e.target.hasAttribute('data-close')) closeReview();
+    if (e.target.closest('[data-close]')) closeReview();
   });
 
   document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape' && !modal.hidden) closeReview();
+    if (modal.hidden) return;
+    if (e.key === 'Escape') {
+      closeReview();
+      return;
+    }
+    // Keep Tab inside the dialog while it is open.
+    if (e.key === 'Tab') {
+      var items = focusableIn(modalBody);
+      if (!items.length) { e.preventDefault(); return; }
+      var first = items[0], last = items[items.length - 1];
+      var active = document.activeElement;
+      if (!modalBody.contains(active)) {
+        e.preventDefault();
+        first.focus();
+      } else if (e.shiftKey && (active === first || active.id === 'modal-title')) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && active === last) {
+        e.preventDefault();
+        first.focus();
+      }
+    }
   });
 
   renderFilters();
