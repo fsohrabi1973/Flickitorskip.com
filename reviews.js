@@ -3,11 +3,115 @@
 // Posters come from the TMDB image CDN (image.tmdb.org). TMDB's terms ask for attribution somewhere on the site.
 
 var SITE = {
-  updated: 'November 8, 2026',
+  updated: 'November 13, 2026',
   boxOfficeWeekend: 'Nov. 6-8'
 };
 
 var MOVIES = [
+  {
+    id: 'ebenezer',
+    title: 'Ebenezer',
+    status: 'Opens Fri., Nov. 13',
+    poster: 'https://image.tmdb.org/t/p/w500/6H2N59jJW1hZEzn2ZdrMvJw5vNI.jpg',
+    tmdbId: 1567605,
+    director: 'Ti West',
+    cast: ['Johnny Depp', 'Rupert Grint', 'Andrea Riseborough', 'Sam Claflin', 'Daisy Ridley', 'Tramell Tillman', 'Ian McKellen'],
+    studio: 'Paramount Pictures',
+    mpaa: 'PG-13',
+    runtime: '1h 56m',
+    genres: ['Fantasy', 'Comedy', 'Drama'],
+    color: 'linear-gradient(135deg, #0a0a0f 0%, #3b0d12 55%, #c9a227 100%)',
+    rating: 2.5,
+    headline: "Johnny Depp as Scrooge in a gothic Christmas Carol from a horror director. It's a weird swing, and it only half connects.",
+    review: [
+      "On paper this is one of the strangest pitches of the year. Take the most adapted Christmas story ever written, hand it to Ti West, a guy who made his name on slow-burn horror, and cast Johnny Depp as Scrooge. Then surround him with Ian McKellen, Daisy Ridley, Andrea Riseborough and Rupert Grint. I was curious. I think a lot of people were.",
+      "You know the bones of it. Ebenezer Scrooge is rich, miserable and allergic to Christmas, and on Christmas Eve he gets a series of visitors who aren't from this world. West pushes it toward gothic dark fantasy with a streak of comedy, so this isn't the cozy version you grew up with.",
+      "When it leans into the spooky stuff, it has real atmosphere. West knows how to make a room feel wrong, and a ghost story is right in his wheelhouse. Depp clearly came to play, and if you like him in big, odd, theatrical mode, you're going to get plenty of it. The supporting cast is so stacked that you keep waiting for someone to steal a scene, and a few of them do.",
+      "Where it wobbles is the heart. A Christmas Carol works because Scrooge's change actually lands, and because the story cares about the people he's been stepping on. This version seems more interested in Scrooge as a weird, entertaining character than in what the story is supposed to be saying, and at almost two hours the tone keeps sliding between creepy, goofy and sincere without settling on any of them. For some people that's going to be charming. For others it's going to wear thin fast.",
+      "If you're a Ti West fan or you're dying to see Depp go full eccentric again, go. If you just want a Christmas Carol that'll make you a little misty, the old ones are still sitting right there."
+    ],
+    bottomLine: "A moody, oddball Scrooge with great ghosts and a shaky heart. Fun to look at, harder to love.",
+    scores: { rt: '51%', metacritic: '46' },
+    boxOffice: 'Opens Nov. 13 ($1.5M from Thursday previews)'
+  },
+  {
+    id: 'how-to-rob-a-bank',
+    title: 'How to Rob a Bank',
+    status: 'Opens Fri., Nov. 13',
+    poster: 'https://image.tmdb.org/t/p/w500/ifYDZkr2qkHFz87TNVvlxajOxl5.jpg',
+    tmdbId: 1437511,
+    director: 'David Leitch',
+    cast: ['Nicholas Hoult', 'Zoë Kravitz', 'Anna Sawai', 'Rhenzy Feliz', 'Pete Davidson', 'John C. Reilly'],
+    studio: 'Amazon MGM Studios',
+    mpaa: 'R',
+    runtime: '2h 2m',
+    genres: ['Action', 'Crime', 'Comedy'],
+    color: 'linear-gradient(135deg, #0b3d2e 0%, #c6ff3d 50%, #ff3fa4 100%)',
+    rating: 2,
+    headline: "A heist crew that posts its robberies online. Great cast, slick action, and a gimmick that gets old long before the movie ends.",
+    review: [
+      "Look at that cast. Nicholas Hoult, Zoë Kravitz, Anna Sawai, Pete Davidson, John C. Reilly, all in a heist movie from the guy who directed Atomic Blonde and The Fall Guy. This should be an easy Friday night. That's exactly why it stings that it isn't.",
+      "The setup is a crew of bank robbers in Pittsburgh who don't just pull jobs, they film them and post them for the internet to eat up. That makes them famous and it makes them a target, and pretty soon a veteran FBI agent is on their trail.",
+      "Leitch can still shoot action. When the movie's moving, it's slick and loud and you can tell real money went into it. And this cast is charismatic enough that you want to hang out with them even when the script isn't giving them much. Kravitz and Hoult look great doing it, and Reilly is always welcome.",
+      "The trouble is the hook. The social media angle is the whole reason the movie exists, and it handles it with about as much subtlety as a phone notification at full volume. It wants to say something about fame and clout, but mostly it just keeps reminding you that it thinks it's clever. Then it runs past two hours, which is a long time to spend with a gimmick. The heists stop feeling dangerous and start feeling like content.",
+      "If you love a heist movie and you'll forgive a lot for a good-looking cast, maybe catch it when it lands on Prime. I wouldn't pay for a ticket."
+    ],
+    bottomLine: "Stylish and well cast, but the online-heist gimmick wears out its welcome way before the two-hour mark.",
+    scores: { rt: '31%', metacritic: '47' },
+    boxOffice: 'Opens Nov. 13 ($900K so far)'
+  },
+  {
+    id: 'victorian-psycho',
+    title: 'Victorian Psycho',
+    status: 'Opens Fri., Nov. 13',
+    poster: 'https://image.tmdb.org/t/p/w500/9LHVZevgdsdbjJdkFr6bk9EwX7q.jpg',
+    tmdbId: 1379486,
+    director: 'Zachary Wigon',
+    cast: ['Maika Monroe', 'Thomasin McKenzie', 'Ruth Wilson', 'Jason Isaacs'],
+    studio: 'Bleecker Street',
+    mpaa: 'R',
+    runtime: '1h 42m',
+    genres: ['Horror', 'Comedy', 'Thriller'],
+    color: 'linear-gradient(135deg, #1a0003 0%, #8b0000 55%, #e8dcc8 100%)',
+    rating: 3.5,
+    headline: "Maika Monroe as a governess with a very dark secret. Bloody, nasty and a lot funnier than a period piece has any right to be.",
+    review: [
+      "I love it when a movie knows exactly what it is, and this one does. It's a corset drama where the polite new governess is the most dangerous thing in the house, and it's having a blast with that idea. Maika Monroe has been one of the best things in modern horror for a while now, and this looks like the role that lets her really cut loose.",
+      "It's 1858. Winifred Notty shows up at Ensor House, a remote gothic estate, to look after the children. She seems proper enough. Then members of the staff start disappearing, and the people who run the house begin to wonder who exactly they've hired. Virginia Feito wrote the screenplay from her own novel, so the voice is coming straight from the source.",
+      "Monroe is the reason to go. She plays it sharp and strange and gleefully unhinged, and the movie's sense of humor is wicked in the best way. It pokes at all the stuffy rules of the era, especially the ones about what women are supposed to be, and then it gets bloody about it. Ruth Wilson and Jason Isaacs are perfect for this kind of buttoned-up nightmare, too.",
+      "It's not quite as sharp as it wants to be. The satire sometimes stops at the obvious, and once you get the joke, a few stretches feel like they're just waiting for the next kill. It's more of a nasty little treat than a big statement, and if you go in hoping for something deep, you might leave a little underfed.",
+      "If you like your horror dark, funny and dressed in lace, this is a great pick for the weekend. It's rated R for strong bloody violence and it means it, so don't bring the squeamish."
+    ],
+    bottomLine: "A wicked, blood-soaked period romp with Maika Monroe at full tilt. Not deep, just really fun.",
+    scores: { rt: '74%', metacritic: '52' },
+    boxOffice: 'Opens Nov. 13'
+  },
+  {
+    id: 'ghost-soldier',
+    title: 'Ghost Soldier',
+    status: 'Opens Wed., Nov. 11',
+    poster: 'https://image.tmdb.org/t/p/w500/8Y4oJ5iUs3hgPcDB3SIEmsNYjZk.jpg',
+    tmdbId: 1562642,
+    director: 'William Eubank',
+    cast: ['Jim Caviezel', 'Olivia Thirlby', 'Garret Dillahunt', 'Shea Whigham', 'Beau Knapp'],
+    studio: 'Sony Pictures / Columbia Pictures',
+    mpaa: 'PG-13',
+    runtime: '1h 30m',
+    genres: ['Action', 'Thriller'],
+    color: 'linear-gradient(135deg, #10141a 0%, #3a4a3f 50%, #a83232 100%)',
+    rating: 2.5,
+    headline: "Jim Caviezel defends his Wyoming neighbors with homemade high-tech weapons. Critics shrugged, but the crowd it's made for is eating it up.",
+    review: [
+      "Some movies are made for critics and some are made for a very specific Friday night crowd. Ghost Soldier is the second kind, and it isn't pretending otherwise. It's a lean, 90-minute action movie where one tough guy stands up for the little people, and that's pretty much the whole sales pitch.",
+      "Jim Caviezel plays a former Green Beret who's gone off the grid in Wyoming, where he designs weapons for a military research agency. When crooked local law enforcement and foreign operatives try to grab the ranch land and water around him, he decides his neighbors aren't going to be pushed around.",
+      "The good news is it doesn't waste your time. Ninety minutes, straight to the point, and the gadget angle gives the action a little more flavor than the average guy-with-a-rifle movie. Garret Dillahunt and Shea Whigham are always great at playing guys you don't trust, and the Wyoming setting looks terrific.",
+      "The not-so-good news is that you've seen this movie before, plenty of times. The villains are cartoonishly bad, the hero is basically flawless, and the story never really surprises you. It's earnest to a fault, and if the us-against-them messaging isn't your thing, there isn't much else here to grab onto.",
+      "If you love old-school, one-man-army action movies and you want something short and simple, you'll probably have a good time, and the audience scores say a lot of people are. Everybody else can wait for streaming."
+    ],
+    bottomLine: "A short, earnest, by-the-numbers action movie that its target audience is going to like a lot more than critics did.",
+    scores: { rt: '38%', metacritic: '41', audience: '90%' },
+    boxOffice: 'Opened Nov. 11 ($3.1M so far)'
+  },
   {
     id: 'the-cat-in-the-hat',
     title: 'The Cat in the Hat',
@@ -31,8 +135,8 @@ var MOVIES = [
       "Kids are going to have a great time. Families are giving it top marks, and honestly, that's who it's for. If you're a parent, you'll get a few laughs and a decent nap's worth of color and noise. If you're an adult going alone, I'm not sure why you're here."
     ],
     bottomLine: "A fun, frantic family outing that's better than you feared, just way busier than it needs to be.",
-    scores: { rt: '47%', metacritic: '46', cinemascore: 'A', audience: '88%' },
-    boxOffice: '$20.5M opening weekend',
+    scores: { rt: '49%', metacritic: '46', cinemascore: 'A', audience: '88%' },
+    boxOffice: '$20.0M opening weekend',
     archived: false
   },
   {
@@ -58,14 +162,14 @@ var MOVIES = [
       "Critics are split, while faith audiences are really showing up for it and loving it. If you like your history earnest and your movies with a message, go. If you're allergic to sentimental, you'll be checking the time."
     ],
     bottomLine: "Big-hearted and ambitious, but sappier and longer than it needs to be.",
-    scores: { rt: '50%', cinemascore: 'A', audience: '93%' },
-    boxOffice: '$9.3M opening weekend',
+    scores: { rt: '67%', cinemascore: 'A', audience: '93%' },
+    boxOffice: '$9.4M opening weekend',
     archived: false
   },
   {
     id: 'jimmy',
     title: 'Jimmy',
-    status: '#10 at the box office',
+    status: '#12 at the box office',
     poster: 'https://image.tmdb.org/t/p/w500/xcMiTqj4kvSnUHhSLZ1WUvI9rzH.jpg',
     tmdbId: 1241478,
     director: 'Aaron Burns',
@@ -85,8 +189,8 @@ var MOVIES = [
       "Critics are lukewarm, and audiences are eating it up. If you love classic Hollywood or you've watched It's a Wonderful Life every Christmas of your life, it's an easy, warm two hours. Everyone else can wait for it to stream."
     ],
     bottomLine: "A good lead performance in a safe, sentimental biopic that only really comes alive in the war scenes.",
-    scores: { rt: '63%', metacritic: '45', audience: '96%' },
-    boxOffice: '$2.2M opening weekend',
+    scores: { rt: '59%', metacritic: '45', audience: '95%' },
+    boxOffice: '$2.1M opening weekend',
     archived: false
   },
   {
@@ -112,8 +216,8 @@ var MOVIES = [
       "If you saw Minus One, you already know you're going. If you didn't, go anyway, and find the biggest screen near you. It's subtitled, so don't let that scare you off."
     ],
     bottomLine: "A huge, scary, heartfelt monster movie that only slips a little in the home stretch.",
-    scores: { rt: '90%', metacritic: '74', cinemascore: 'A', audience: '96%' },
-    boxOffice: '$31.6M opening weekend',
+    scores: { rt: '91%', metacritic: '74', cinemascore: 'A', audience: '96%' },
+    boxOffice: '$30.6M opening weekend',
     archived: false
   },
   {
@@ -139,14 +243,14 @@ var MOVIES = [
       "If you like your comedy black and your actors at full strength, go see it. It's the kind of grown-up movie that's getting harder to find in theaters."
     ],
     bottomLine: "Sharp, nasty and sad in the way only McDonagh does it, with Malkovich at his best.",
-    scores: { rt: '94%', metacritic: '78', audience: '91%' },
-    boxOffice: '$6.0M opening weekend (1,100 theaters)',
+    scores: { rt: '94%', metacritic: '78', audience: '92%' },
+    boxOffice: '$5.9M opening weekend (1,100 theaters)',
     archived: false
   },
   {
     id: 'ramayana-rise-of-a-legend',
     title: 'Ramayana: Rise of a Legend',
-    status: '#5 at the box office',
+    status: '#4 at the box office',
     poster: 'https://image.tmdb.org/t/p/w500/cK6xaYrb498y2rmMRSZmRKaCXKL.jpg',
     tmdbId: 656908,
     director: 'Nitesh Tiwari',
@@ -167,13 +271,13 @@ var MOVIES = [
     ],
     bottomLine: "Gorgeous and huge, but long and strangely cold for a story this full of feeling.",
     scores: { rt: '76%', metacritic: '58', audience: '93%' },
-    boxOffice: '$8.7M opening weekend',
+    boxOffice: '$8.9M opening weekend ($12.4M first-week total)',
     archived: false
   },
   {
     id: 'the-only-living-pickpocket-in-new-york',
     title: 'The Only Living Pickpocket in New York',
-    status: '#17 at the box office',
+    status: '#19 at the box office',
     poster: 'https://image.tmdb.org/t/p/w500/pNdB9va2AEPQe9UfhKAdIt8nus9.jpg',
     tmdbId: 1458099,
     director: 'Noah Segan',
@@ -200,7 +304,7 @@ var MOVIES = [
   {
     id: 'wildwood',
     title: 'Wildwood',
-    status: '#7 at the box office',
+    status: '#6 at the box office',
     poster: 'https://image.tmdb.org/t/p/w500/snFM00mpNAfUzUtkdEW0uDEvXA0.jpg',
     tmdbId: 791523,
     director: 'Travis Knight',
@@ -221,13 +325,13 @@ var MOVIES = [
     ],
     bottomLine: "A handmade fantasy epic that's a little long and absolutely worth it.",
     scores: { rt: '99%', metacritic: '88', cinemascore: 'A', audience: '97%' },
-    boxOffice: '$39.4M total after 3 weeks',
+    boxOffice: '$40.1M total after 3 weeks',
     archived: false
   },
   {
     id: 'wicker',
     title: 'Wicker',
-    status: '#9 at the box office',
+    status: '#10 at the box office',
     poster: 'https://image.tmdb.org/t/p/w500/6FcBZOKvyrLCKGCyBG0ySCR4okt.jpg',
     tmdbId: 1195803,
     director: 'Alex Huston Fischer and Eleanor Wilson',
@@ -254,7 +358,7 @@ var MOVIES = [
   {
     id: 'clayface',
     title: 'Clayface',
-    status: '#6 at the box office',
+    status: '#7 at the box office',
     poster: 'https://image.tmdb.org/t/p/w500/9l1NuFjel2j89hiuiJbsxfblqjy.jpg',
     tmdbId: 1400940,
     director: 'James Watkins',
@@ -275,7 +379,7 @@ var MOVIES = [
     ],
     bottomLine: "A messy but bold DC horror movie with a strong lead and gloriously gross effects.",
     scores: { rt: '77%', metacritic: '59', cinemascore: 'A-', audience: '94%' },
-    boxOffice: '$56.6M total after 3 weeks',
+    boxOffice: '$56.7M total after 3 weeks',
     archived: false
   },
   {
@@ -362,7 +466,7 @@ var MOVIES = [
   {
     id: 'you-can-see-everything',
     title: 'You Can See Everything',
-    status: '#4 at the box office',
+    status: '#5 at the box office',
     poster: 'https://image.tmdb.org/t/p/w500/Ap8QwmKfSjYbWC4XIP8w9pdn72O.jpg',
     tmdbId: 1765072,
     director: 'Nathan Fielder and Lance Oppenheim',
@@ -383,13 +487,13 @@ var MOVIES = [
     ],
     bottomLine: 'A weird, gripping portrait that leaves you arguing with yourself about who you just spent three hours with.',
     scores: { rt: '96%', metacritic: '97', audience: '96%' },
-    boxOffice: '$79.8M total after 4 weeks',
+    boxOffice: '$79.4M total after 4 weeks',
     archived: false
   },
   {
     id: 'whalefall',
     title: 'Whalefall',
-    status: '#23 at the box office',
+    status: '#25 at the box office',
     poster: 'https://image.tmdb.org/t/p/w500/vjTYUTgh9nO88i6HZ4YPRhiFL05.jpg',
     tmdbId: 1255833,
     director: 'Brian Duffield',
@@ -416,7 +520,7 @@ var MOVIES = [
   {
     id: 'sense-and-sensibility',
     title: 'Sense and Sensibility',
-    status: '#19 at the box office',
+    status: '#21 at the box office',
     poster: 'https://image.tmdb.org/t/p/w500/czsyPHosFNbh4PPqXfqWu1aBXnA.jpg',
     tmdbId: 1503762,
     director: 'Georgia Oakley',
@@ -470,7 +574,7 @@ var MOVIES = [
   {
     id: 'other-mommy',
     title: 'Other Mommy',
-    status: '#12 at the box office',
+    status: '#13 at the box office',
     poster: 'https://image.tmdb.org/t/p/w500/fGRNCssTRrhYZxNzykGGCoMsAVq.jpg',
     tmdbId: 1400837,
     director: 'Rob Savage',
@@ -551,7 +655,7 @@ var MOVIES = [
   {
     id: 'verity',
     title: 'Verity',
-    status: '#18 at the box office',
+    status: '#20 at the box office',
     poster: 'https://image.tmdb.org/t/p/w500/Lr0Ng7Gg02RW1AyfYEL6P0WUvd.jpg',
     tmdbId: 1283515,
     director: 'Michael Showalter',
@@ -605,7 +709,7 @@ var MOVIES = [
   {
     id: 'resident-evil',
     title: 'Resident Evil',
-    status: '#14 at the box office',
+    status: '#16 at the box office',
     poster: 'https://image.tmdb.org/t/p/w500/i7UyjfPio0VFHB9rBUZSFyhOoM8.jpg',
     tmdbId: 1423191,
     director: 'Zach Cregger',
@@ -659,7 +763,7 @@ var MOVIES = [
   {
     id: 'forgotten-island',
     title: 'Forgotten Island',
-    status: '#28 at the box office',
+    status: '#30 at the box office',
     poster: 'https://image.tmdb.org/t/p/w500/dGSsPovyUW5XVekXcy7F2GyhTEh.jpg',
     tmdbId: 1465063,
     director: 'Joel Crawford, Januel Mercado',
@@ -686,7 +790,7 @@ var MOVIES = [
   {
     id: 'heart-of-the-beast',
     title: 'Heart of the Beast',
-    status: '#15 at the box office',
+    status: '#17 at the box office',
     poster: 'https://image.tmdb.org/t/p/w500/1ApfSA8JTqeha3GTFEY8syV4auq.jpg',
     tmdbId: 1263337,
     director: 'David Ayer',
